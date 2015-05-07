@@ -107,12 +107,15 @@ fieldset {
 // Search
 input.ps-search-bar {
 	position: relative;
-	min-width: 200px;
+	width: 220px;
 	text-align: left;
+	line-height: 115%;
+	@include transition(border-color,80,linear);
 
 	// When has value, color search icon
 	&:focus,
 	&:not([value='']) {
+		width: 300px;
 		& ~ .ps-icon {
 			border-color: $PS_Olive;
 			&:after {

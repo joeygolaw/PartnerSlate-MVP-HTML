@@ -687,12 +687,19 @@ label {
 
 input.ps-search-bar {
   position: relative;
-  min-width: 200px;
-  text-align: left; }
-  input.ps-search-bar:focus ~ .ps-icon, input.ps-search-bar:not([value='']) ~ .ps-icon {
-    border-color: #0C9; }
-    input.ps-search-bar:focus ~ .ps-icon:after, input.ps-search-bar:not([value='']) ~ .ps-icon:after {
-      background-color: #0C9; }
+  width: 220px;
+  text-align: left;
+  line-height: 115%;
+  -webkit-transition: border-color 80ms linear;
+  -moz-transition: border-color 80ms linear;
+  -o-transition: border-color 80ms linear;
+  transition: border-color 80ms linear; }
+  input.ps-search-bar:focus, input.ps-search-bar:not([value='']) {
+    width: 300px; }
+    input.ps-search-bar:focus ~ .ps-icon, input.ps-search-bar:not([value='']) ~ .ps-icon {
+      border-color: #0C9; }
+      input.ps-search-bar:focus ~ .ps-icon:after, input.ps-search-bar:not([value='']) ~ .ps-icon:after {
+        background-color: #0C9; }
 
 input[type="text"],
 input[type="email"],
