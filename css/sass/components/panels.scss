@@ -78,6 +78,7 @@
 		// selector for exposed .toggle-list's
 		&.toggled {
 			.ps-panel-title {
+				color: $PS_Slate;
 				&:after {
 					margin-top: 4px;
 					@include transform-rotate(-135deg);
@@ -93,7 +94,7 @@
 		font-weight: bold;
 		font-size: 0.8125em;
 		text-transform: uppercase;
-		letter-spacing: 0.15em;
+		letter-spacing: 0.1em;
 		}// .ps-panel-title
 
 	ul.ps-panel-list {

@@ -3,7 +3,7 @@
 	margin-top: $ps-topbar-height + ($padding-base * 2);
 
 	#ps-page-main {
-		width: 720px;
+		width: 680px;
 
 		// ---- SEARCH
 		// Search Info
@@ -109,8 +109,19 @@
 		}// #ps-page-main
 
 	#ps-page-menu {
-		width: 200px;
+		width: 240px;
 		margin-right: ($padding-base * 2);
+
+		// Form wrapper for search filter page menu
+		#ps-filter-form {
+			margin-top: ($padding-base * 4);
+
+			// Form submit wrapper
+			.ps-submit-form {
+				margin: ($padding-base * 2) 0;
+				text-align: right;
+				}// .ps-submit-form
+			}// #ps-filter-form
 
 		.search-filter-list {
 			li {
@@ -122,7 +133,7 @@
 
 				input[type="checkbox"] {
 					position: absolute;
-						top: 6px;
+						top: 7px;
 						left: 13px;
 					&:checked {
 						& + span {
@@ -139,6 +150,7 @@
 
 			.list-item {
 				padding: 0.5em 1.25em 0.5em 0;
+				line-height: 112.5%;
 				}// .list-item
 			}// .search-filter-list
 

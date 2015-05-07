@@ -141,7 +141,7 @@ a {
   #ps-page.scrolled #ps-page-content.ps-page-type-list #ps-page-menu {
     top: 80px; }
   #ps-page.scrolled #ps-page-content.ps-page-type-list #ps-page-main {
-    left: 220px; }
+    left: 240px; }
   #ps-page.scrolled #ps-page-content.ps-page-type-menu #ps-page-menu {
     top: 124px; }
   #ps-page.scrolled #ps-page-content.ps-page-type-menu #ps-page-main {
@@ -234,13 +234,15 @@ a {
         color: #2B3539; }
         .ps-panel.toggle-list .ps-panel-title:active:after {
           border-color: #2B3539; }
-    .ps-panel.toggle-list.toggled .ps-panel-title:after {
-      margin-top: 4px;
-      -webkit-transform: rotate(-135deg);
-      -moz-transform: rotate(-135deg);
-      -ms-transform: rotate(-135deg);
-      -o-transform: rotate(-135deg);
-      transform: rotate(-135deg); }
+    .ps-panel.toggle-list.toggled .ps-panel-title {
+      color: #567; }
+      .ps-panel.toggle-list.toggled .ps-panel-title:after {
+        margin-top: 4px;
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        transform: rotate(-135deg); }
 
 .ps-panel-title {
   padding: 15px;
@@ -248,7 +250,7 @@ a {
   font-weight: bold;
   font-size: 0.8125em;
   text-transform: uppercase;
-  letter-spacing: 0.15em; }
+  letter-spacing: 0.1em; }
 
 ul.ps-panel-list {
   width: inherit;
@@ -1623,7 +1625,7 @@ body.page-overlay {
 .ps-page-type-list {
   margin-top: 80px; }
   .ps-page-type-list #ps-page-main {
-    width: 720px; }
+    width: 680px; }
     .ps-page-type-list #ps-page-main .search-info {
       position: relative;
       color: #567; }
@@ -1681,15 +1683,20 @@ body.page-overlay {
         margin-top: -0.5em;
         font-size: 0.875em; }
   .ps-page-type-list #ps-page-menu {
-    width: 200px;
+    width: 240px;
     margin-right: 20px; }
+    .ps-page-type-list #ps-page-menu #ps-filter-form {
+      margin-top: 40px; }
+      .ps-page-type-list #ps-page-menu #ps-filter-form .ps-submit-form {
+        margin: 20px 0;
+        text-align: right; }
     .ps-page-type-list #ps-page-menu .search-filter-list li {
       position: relative; }
       .ps-page-type-list #ps-page-menu .search-filter-list li * {
         cursor: pointer; }
       .ps-page-type-list #ps-page-menu .search-filter-list li input[type="checkbox"] {
         position: absolute;
-        top: 6px;
+        top: 7px;
         left: 13px; }
         .ps-page-type-list #ps-page-menu .search-filter-list li input[type="checkbox"]:checked + span {
           color: #567;
@@ -1698,7 +1705,8 @@ body.page-overlay {
         font-size: 0.875em;
         color: #7f8c99; }
     .ps-page-type-list #ps-page-menu .search-filter-list .list-item {
-      padding: 0.5em 1.25em 0.5em 0; }
+      padding: 0.5em 1.25em 0.5em 0;
+      line-height: 112.5%; }
     .ps-page-type-list #ps-page-menu .ps-panel {
       margin-bottom: 15px; }
       .ps-page-type-list #ps-page-menu .ps-panel:last-of-type {
