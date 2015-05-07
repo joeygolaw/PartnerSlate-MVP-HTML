@@ -1,0 +1,121 @@
+// < 520 PX
+@media only screen and (max-width: 520px) {
+
+	h1 {
+		font-size: 1.5em;
+		letter-spacing: -0.01em;
+		word-spacing: 0.025em;
+		}// <h1>
+
+	#ps-panel-who {
+		height: ($ps-slider-height * 0.75) !important;
+		}// #ps-panel-who
+
+	#ps-slider-manufacturer {
+		h1 span {
+			font-size: 0.9375em;
+			}// <h1>
+		}// #ps-slider-manufacturer
+
+	.dots {
+		right: 7%;
+		bottom: 50%;
+		}// .dots
+
+	.slider-message {
+		width: 100%;
+		height: 45%;
+		padding: 2em 1.5em 0 1.5em;
+		p {
+			font-size: 0.9375em;
+			padding-right: 0;
+			}// <p>
+		}// .slider-message
+
+	.slider-product {
+		width: 60%;
+		height: 55%;
+		img {
+			left: -25%;
+			width: auto;
+			height: 100%;
+			}// <img>
+		}// .slider-product
+
+	.slider-producer {
+		width: 40%;
+		height: 55%;
+		img {
+			right: -5%;
+			}// <img>
+		}// .slider-producer
+
+	#ps-panel-how {
+		.panel-title {
+			left: auto;
+			right: 7%;
+			margin-left: 0;
+			}// .panel-title
+		}// #ps-panel-how
+
+	#ps-panel-why {
+		.column {
+			&.half {
+				width: 100%;
+				}// .half
+			}// .column
+		#why-brands {
+			padding: 4em 4em 5em 4em;
+			text-align: center;
+			border-bottom: 1px solid tint($PS_Slate, 75%);
+			.button.text {
+				padding-left: 1.5em;
+				}// .button
+			&:after {
+				top: 100%;
+				left: 50%;
+				}// :after
+			}// #why-brands
+
+		#why-manufacture {
+			padding: 4em 4em 3em 4em;
+			margin-top: 2em;
+			text-align: center;
+			.button.text {
+				padding-right: 1.5em;
+				}// .button
+			}// #ps-manufacture
+
+		// Suppliers
+		#why-suppliers {
+			overflow: hidden;
+			p {
+				padding: 0 20%;
+				}// <p>
+
+			// Crops
+			&:before,
+			&:after {
+				top: 35%;
+				width: 55%;
+				height: 55%;
+				}// :after, :before
+
+				// Left Crops
+				&:before {
+					left: -26%;
+					}// :before
+
+				// Right Crops
+				&:after {
+					right: -26%;
+					}// :after
+			}// #why-suppliers
+		}// #ps-panel-why
+
+	#ps-panel-signup {
+		h1 {
+			font-size: 1.25em;
+			}
+		}// #ps-panel-signup
+	}// 520 PX

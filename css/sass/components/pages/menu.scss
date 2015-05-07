@@ -1,0 +1,30 @@
+// ------------- Menu Page Type
+.ps-page-type-menu {
+	margin-top: $ps-topbar-height;
+	padding-top: (($ps-page-topbar-height + 1px) + ($padding-base * 2));
+	
+	#ps-page-topbar {
+		margin-bottom: ($padding-base *2);
+		}// #ps-page-topbar
+
+	#ps-page-main {
+		width: 660px;
+		}// #ps-page-main
+
+	#ps-page-menu {
+		width: 260px;
+		margin-right: ($padding-base * 2);
+
+		ul.ps-panel-list {
+			color: tint($PS_Slate, 50%);
+			li {
+				&.current-dot,
+				&.current-checkmark {
+					a {
+						cursor: default;
+						}// <a>
+					}// .current-
+				}// <li>
+			}// ul.ps-panel-list
+		}// #ps-page-menu
+	}// .ps-page-type-menu

@@ -1,0 +1,71 @@
+// ---------- Mailchimp
+// Mailchimp signup container
+div#mc_embed_signup {
+	width: 33%;
+		min-width: 280px;
+	margin: 1.5625em auto 0 auto;
+	text-align: left;
+
+	// Select values
+	select {
+		&[value=""] {
+			color: tint($PS_Slate,50%);
+			}
+		}// <select>
+
+	.button {
+		margin-top: 0.3125em;
+		}// .button
+
+	.mc-field-group {
+		margin-bottom: 0.9375em;
+		}// .mc-field-group
+
+	// Inline Error
+	div.mce_inline_error {
+		margin: 0.25em 0 0 0;
+		padding: 0 2em;
+		color: shade($PS_error_red,10%);
+		font-size: 0.8125em;
+		font-weight: 100;
+		line-height: 2em;
+		letter-spacing: 0.03em;
+		background-color: transparent;
+		@include header-font;
+		font-style: italic;
+		}// div.mc_inline_error
+
+	input[type="text"],
+	input[type="email"],
+	select {
+		&.mce_inline_error {
+			color: $black;
+			border-color: $PS_error_red;
+			background-color: tint($PS_error_red,95%);
+			@include input-placeholder-color($black);
+				@include transition((background,border,color),100,linear);
+			&:focus {
+				@include input-placeholder-color(transparent);
+				}// :focus
+			}// input.mc_inline_error
+		}
+
+	// Valid
+	.valid,
+	option:checked {
+		background-color: $white;
+		}// .valid
+
+	// Success Response
+	#mce-success-response {
+		margin: 2em auto 1.5em auto;
+		padding: 0 0.5em;
+		color: $PS_Charcoal;
+		font-size: 0.9375em;
+		line-height: 1.375em;
+		letter-spacing: 0.01em;
+		word-spacing: 0.1em;
+		@include header-font;
+		font-style: italic;
+		}
+	}// div#mc_embed_signup

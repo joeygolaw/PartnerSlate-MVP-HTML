@@ -1,0 +1,45 @@
+// -------- IMAGES
+// Avatars
+.ps-avatar {
+	display: inline-block;
+	img {
+		display: inline-block;
+		width: inherit;
+		height: inherit;
+		}// <img>
+
+	// Sizes
+	&.large {
+		width: 100px;
+		height: 100px;
+		}// .large
+	&.small {
+		width: 48px;
+		height: 48px;
+		}// .small
+	}// .ps-avatar
+
+// Cover Images
+.ps-profile-cover {
+	img {
+		display: inline-block;
+		width: inherit;
+		height: inherit;
+		}// <img>
+
+	// Sizes
+	&.small {
+		width: 360px;
+		height: 120px;
+		}// .small
+	&.medium {
+		width: 660px;
+		height: 220px;
+		}// .medium
+	}// .ps-profile-cover
+
+// ---- Specific images
+// images in input rows (Menu Page Type)
+.input-row .ps-avatar {
+	margin-right: $padding-base;
+	}// .input-row .ps-avatar

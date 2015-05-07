@@ -1,0 +1,89 @@
+// < 640 PX
+@media only screen and (max-width: 640px) {
+
+	h1 {
+		font-size: 1.25em;
+		letter-spacing: -0.01em;
+		word-spacing: 0.025em;
+		}// <h1>
+
+	.ps-lockup {
+		font-size: 0.9375em;
+		}// .ps-lockup
+
+	.button {
+		padding: 0.8125em 1.5em;
+		font-size: 0.9375em;
+		}// .button
+
+	#ps-topbar {
+		padding: 1.5em;
+		}// #ps-topbar
+
+	#ps-page-footer {
+		font-size: 0.9375em;
+		text-align: center;
+		.button {
+			display: none;
+			}// .button
+		}// #ps-page-footer
+
+	#ps-panel-who {
+		height: ($ps-slider-height * 0.625) !important;
+		}// #ps-panel-who
+
+	#ps-panel-how {
+		padding: 2.5em 0 0.5em 0;
+		.panel-title {
+			width: 12em;
+			margin-left: -6em;
+			padding: 1.33333333em 1em 0.666666667em 1em;
+			}// .panel-title
+		.column.quarter {
+			width: 49%;
+			margin-bottom: 3em;
+			}// .column.quarter
+		}// #ps-panel-how
+
+	#ps-panel-why {
+		p {
+			font-size: 0.875em;
+			}// <p>
+
+		#why-brands {
+			padding-right: 14%;
+			text-align: left;
+			.button.text {
+				padding-left: 0;
+				}// .button
+			}// #why-brands
+
+		#why-manufacture {
+			padding-left: 14%;
+			text-align: right;
+			.button.text {
+				padding-right: 0;
+				}// .button
+			}// #why-manufacture
+		}// #ps-panel-why
+
+	#ps-panel-signup {
+		p {
+			font-size: 0.875em;
+			padding: 0 2em;
+			}// <p>
+		}// #ps-panel-signup
+
+	.slider-product {
+		height: 45%;
+		}// .slider-product
+
+	.slider-message {
+		height: 55%;
+		padding: 1.75em 0 0 1.5em;
+		p {
+			padding-right: 8%;
+			font-size: 0.875em;
+			}// <p>
+		}// .slider-message
+	}// 640 PX

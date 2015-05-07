@@ -1,0 +1,203 @@
+// -------- PANELS
+.ps-panel {
+	width: 100%;
+	position: relative;
+	background-color: $white;
+	@include round(top,right,$ps-panel-radius);
+	@include round(bottom,left,$ps-panel-radius);
+	@include box-sizing(border-box);
+
+	.ps-panel-arrows {
+		position: absolute;
+			top: -16px;
+			right: ($padding-base * 2.5);
+		display: block;
+		width: auto;
+		@include transform-scaleXY(0.4,0.5);
+		.arrow {
+			display: block;
+			width: 32px;
+			height: 32px;
+			background-color: $white;
+			border-width: 3px 0 0 3px;
+			border-style: solid;
+			border-color: tint($PS_Slate,50%);
+			@include round(top,left,10px);
+			@include round(bottom,right,10px);
+			@include box-sizing(border-box);
+			@include transform-rotate(45deg);
+			}// .arrow
+		}// .ps-panel-aarows
+
+	.ps-panel-section {
+		padding: ($padding-base * 3) 0;
+		border-bottom: 1px solid tint($PS_Slate, 75%);
+
+		&:last-of-type {
+			border-bottom: 0;
+			}// :last-of-type
+		}// .ps-panel-section
+
+	// Toggle list panel style
+	&.toggle-list {
+		text-align: left;
+
+		.ps-panel-title {
+			cursor: pointer;
+
+			// Toggle arrow
+			&:after {
+				content: "";
+				float: right;
+				display: inline-block;
+				width: 6px;
+				height: 6px;
+				margin-left: 0.5em;
+				border-width: 0 2px 2px 0;
+				border-style: solid;
+				border-color: tint($PS_Slate, 50%);
+				@include transform-rotate(45deg);
+				@include transition-general;
+				}// :after
+
+			&:hover {
+				color: $PS_Slate;
+				&:after {
+					border-color: tint($PS_Slate, 25%);
+					}// :after
+				}// :hover
+
+			&:active {
+				color: $PS_Charcoal;
+				&:after {
+					border-color: $PS_Charcoal;
+					}// :after
+				}// :active
+			}// .ps-panel-title
+
+		// selector for exposed .toggle-list's
+		&.toggled {
+			.ps-panel-title {
+				&:after {
+					margin-top: 4px;
+					@include transform-rotate(-135deg);
+					}// :after
+				}// .ps-panel-title
+			}// .toggled
+		}// .toggle-list
+	}// .ps-panel
+
+	.ps-panel-title {
+		padding: ($padding-base * 1.5);
+		color: tint($PS_Slate, 50%);
+		font-weight: bold;
+		font-size: 0.8125em;
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		}// .ps-panel-title
+
+	ul.ps-panel-list {
+		width: inherit;
+		font-size: 1em;
+		color: $PS_Slate;
+		li {
+			display: block;
+			width: inherit;
+			padding-left: 2.5em;
+			@include box-sizing(border-box);
+			.list-item {
+				display: inline-block;
+				width: 100%;
+				padding: 0.75em 1.25em 0.75em 0;
+				border-bottom: 1px solid $border-color;
+				@include box-sizing(border-box);
+
+				a {
+					text-decoration: underline;
+					&:hover {
+						color: $black;
+						}// :hover
+					&:active {
+						color: $PS_Olive;
+						}// :hover
+					}// <a>
+
+				.subtitle {
+					display: inline-block;
+					margin-top: ($padding-base / 2);
+					font-weight: normal;
+					font-size: 0.867em;
+					color: tint($PS_Charcoal,50%);
+					}// .subtitle
+				}// .list-item
+
+			&:last-of-type {
+				.list-item {
+					border-bottom: 0;
+					}// .list-item
+				}// :last-of-type
+
+			// Unround first and last <li> corners
+			ul li {
+				&:first-child {
+					@include round(top,right,0);
+					}// :first-child
+				&:last-child {
+					@include round(bottom,left,0);
+					}// :last-child
+				}// <ul><li>
+
+			// Current tab style
+			&.current-dot,
+			&.current-checkmark {
+				position: relative;
+				color: $PS_Charcoal;
+				a {
+					cursor: default;
+					}// <a>
+				}// .current-
+
+			// Circle current tab style
+			&.current-dot {
+				a:before {
+					content: "";
+					display: block;
+					position: absolute;
+						top: 50%;
+						left: 1em;
+					width: 8px;
+					height: 8px;
+					margin-left: 1px;
+					margin-top: -4px;
+					background-color: $PS_Olive;
+					@include round-all(4px);
+					}// a:before
+				}// .current-dot
+
+			// Checkmark current tab style
+			&.current-checkmark {
+				a:before {
+					content: "";
+					display: block;
+					position: absolute;
+						top: 50%;
+						left: 1em;
+					width: 4px;
+					height: 11px;
+					margin-left: 1px;
+					margin-top: -10px;
+					border-style: solid;
+					border-width: 0 3px 3px 0;
+					border-color: $PS_Olive;
+					@include transform-rotate(40deg);
+					}// a:before
+				}// .current-checkmark
+			}// <li>
+
+
+		// Panel List Types
+		// Menu List
+		&.menu-list {
+			font-weight: bold;
+			}// .menu-list
+		}// .ps-panel-list

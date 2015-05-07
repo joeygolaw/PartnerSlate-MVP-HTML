@@ -1,0 +1,79 @@
+// -------- PAGINATION
+.ps-pagination {
+	text-align: left;
+	@include unselectable;
+	li {
+		display: inline-block;
+		max-width: 3.25em;
+		margin-right: $padding-base;
+		text-align: center;
+		a {
+			display: inherit;
+			max-width: inherit;
+			padding: 1em;
+			color: $PS_Olive;
+			font-weight: bold;
+			letter-spacing: -1px;
+			border: 1px solid tint($PS_Slate, 50%);
+			@include box-sizing(border-box);
+			&:hover {
+				color: $PS_Slate;
+				border-color: tint($PS_Slate, 25%);
+				background-color: tint($PS_Slate, 95%);
+				}// :hover
+			&:active {
+				color: $PS_Charcoal;
+				}// :active
+			}// <a>
+
+		&.ellipsis {
+			color: tint($PS_Slate, 50%);
+			font-weight: bold;
+			}// .ellipsis
+
+		&:first-of-type {
+			@include round(bottom,left,1em);
+			a {
+				@include round(bottom,left,1em);
+				}// <a>
+			}// :first-of-type
+
+		&:last-of-type {
+			@include round(top,right,1em);
+			a {
+				@include round(top,right,1em);
+				}// <a>
+			}// :first-of-type
+
+		&.current {
+			a {
+				cursor: default;
+				border: 0;
+				color: $PS_Slate;
+				background-color: tint($PS_Slate, 95%);
+				&:hover {
+					@include no-box-shadow;
+					}// :hover
+				}// <a>
+			}// .current
+
+		&.disabled {
+			a {
+				cursor: default;
+				color: tint($PS_Slate, 75%) !important;
+				border-color: transparent !important;
+
+				.ps-icon {
+					color: tint($PS_Slate, 75%) !important;	
+					}// .ps-icon
+
+				&:hover {
+					@include no-box-shadow;
+					}// :hover
+				&:active {
+					background-color: tint($PS_Slate, 95%) !important;
+					}// :active
+				}// <a>
+			}// .disabled
+		}// <li>
+	}// .ps-pagination

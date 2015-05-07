@@ -1,0 +1,45 @@
+// -------- GRID
+.row {
+
+	// Clear floats
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+		}// :after
+
+	// Row Lining
+	.row-lining {
+		width: 100%;
+		max-width: $page-width;
+		min-width: $page-width;
+		margin: 0 auto;
+		@include box-sizing(border-box);
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+			}// :after
+		}// .row-lining
+	}// .row
+
+
+// Main column style
+.column {
+	float: left;
+	position: relative;
+	@include box-sizing(border-box);
+
+	// Last in row
+	&:last-of-type {
+		margin-right: 0;
+		}
+
+	// WIDTHS
+	&.quarter {width: 25%;}
+	&.third {width: 33.333333333%;}
+	&.half {width: 50%;}
+	&.two-third {width: 66.666666666%;}
+	&.three-quarter {width: 75%;}
+	&.full {width: 100%;}
+	}// .column

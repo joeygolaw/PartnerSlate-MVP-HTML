@@ -1,0 +1,72 @@
+// -------- LABELS
+.ps-label {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.5em 1em 0.5em 1.5em;
+	font-size: 0.875em;
+	color: $PS_Slate;
+	background-color: tint($PS_Slate, 95%);
+	@include round-all(1em);
+	@include unselectable;
+
+	&.closable {
+		cursor: pointer;
+
+		// close icon
+		&:after {
+			content: "×";
+			float: right;
+			display: inline-block;
+			margin-left: 0.5em;
+			font-size: 1.25em;
+			font-weight: bold;
+			line-height: 0.8em;
+			color: tint($PS_Slate, 75%);
+			@include text-shadow(1px, 0, 0, tint($PS_Slate, 75%));
+			}// :after
+
+		&:hover {
+			background-color: tint($PS_Slate, 90%);
+			&:after {
+				color: $PS_Slate;
+				@include text-shadow(1px, 0, 0, tint($PS_Slate, 75%));
+				}// :after
+			}// :hover
+
+		&:active {
+			background-color: tint($PS_Slate, 85%);
+			&:after {
+				color: $PS_Charcoal;
+				@include text-shadow(1px, 0, 0, tint($PS_Slate, 75%));
+				}// :after
+			}// :active
+		}// .closable
+
+	&.clear-all-closable {
+		color: tint($PS_Slate, 75%);
+		font-size: 0.8125em;
+		text-decoration: underline;
+		background-color: transparent;
+		padding: 0.5em $padding-base;
+		&:after {
+			content: "";
+			display: none;
+			}// :after
+		&:hover {
+			background-color: transparent;
+			}// :hover
+		}// .clear-all-closable
+	}// .ps-label
+
+.ps-label-group {
+	.ps-label {
+		margin: 3px 2px;
+		}// .ps-label
+
+	// Labels for multi-input entered text
+	&.input-labels {
+		width: 340px;
+		margin-top: $padding-base;
+		margin-left: ($padding-base * 2);
+		}// .input-labels
+	}// .ps-label-group

@@ -1,0 +1,36 @@
+// --------- PS HOW
+#ps-panel-how {
+	position: relative;
+	color: $white;
+	padding: 3.5em 0;
+	background-color: $PS_Charcoal;
+
+	.panel-title {
+		position: absolute;
+			top: -2em;
+			left: 50%;
+		width: 18em;
+		margin-left: -9em;
+		font-size: 0.9375em;
+		font-weight: 200;
+		padding: 1.33333333em 4em 0.666666667em 4em;
+		text-transform: uppercase;
+		letter-spacing: 0.01em;
+		word-spacing: 0.15em;
+		background-color: $PS_Charcoal;
+		@include header-font;
+		@include round(top,left,0.6666666667em);
+		@include round(top,right,0.6666666667em);
+		@include box-sizing(border-box);
+		}// .panel-title
+
+	.how-icon {
+		margin-bottom: 1.25em;
+		}// .how-icon
+
+	p {
+		padding: 0 12%;
+		color: tint($PS_Slate, 25%);
+		font-size: 0.875em;
+		}// <p>
+	}// #ps-panel-how

@@ -1,0 +1,67 @@
+//----------- Colors
+$PS_Olive: #0C9;
+
+$PS_Slate: #567;
+
+$PS_Charcoal: #2B3539;
+
+$PS_error_red: #D66;
+
+
+//----------- Structure Colors
+// Text
+$body-bg-color: tint($PS_Slate,92%);
+
+// Borders
+$border-color: tint($PS_Slate,95%);
+
+// Forms
+$input-max-width: 320px;
+$input-border-color: tint($PS_Slate,75%);
+$input-hover-base: tint($PS_Olive,25%);
+
+
+
+//----------- Structure
+// Spacing
+$padding-base: 10px;
+
+// Borders
+$radius-base: 3px;
+$ps-panel-radius: $padding-base * 1.5;
+
+// Page Content
+$page-width: 940px;
+$max-page-width: 1500px;
+$min-page-width: 960px;
+$min-page-height: 480px;
+
+// Topbars
+$ps-topbar-height: 60px;
+$ps-page-topbar-height: 44px;
+
+// Slider container height
+$ps-slider-height: 560px;
+
+
+//----------- Fonts
+@mixin body-font {
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-style: inherit;
+	}
+
+@mixin header-font {
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+
+@mixin input-font {
+	font-family: "Lato", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-style: inherit;
+	}
+
+
+
+//----------- Transitions
+@mixin transition-general($duration:100) {
+	@include transition(all, $duration, ease-in-out);
+	}

@@ -1,0 +1,29 @@
+// ---------- 1200 PX
+// > 1200 PX
+@media only screen and (min-width: 1200px) {
+
+	#ps-topbar {
+		padding-left: 6%;
+		.button.outline {
+			right: 50%;
+			}// .button.outline
+		}// #ps-topbar
+
+	.slider-message {
+		width: 55%;
+		padding-left: 6%;
+		}// .slider-message
+
+	.slider-product {
+		width: 55%;
+		}// .slider-product
+
+	.slider-producer {
+		width: 45%;
+		img {
+			right: 0;
+			width: 104%;
+			height: auto;
+			}// <img>
+		}// .slider-producer
+	}// > 1200 PX

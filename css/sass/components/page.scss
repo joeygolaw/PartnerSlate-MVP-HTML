@@ -1,0 +1,65 @@
+// -------- PAGE MAIN
+#ps-page {
+	position: relative;
+	min-height: inherit;
+
+	// Page Content
+	#ps-page-content {
+		width: 100%;
+		min-height: inherit;
+		margin-bottom: $ps-topbar-height;
+
+		#ps-page-menu {
+			position: relative;
+			@include unselectable;
+			}// #ps-page-menu
+
+		#ps-page-main {
+			// Add padding to panels
+			.ps-panel {
+				padding: ($padding-base) ($padding-base * 3);
+				}// .ps-panel
+			}// #ps-page-main
+		}// #ps-page-content
+
+	// Scrolled styles
+	&.scrolled {
+		#ps-page-content {
+			#ps-page-menu {
+				position: fixed;
+				}// #ps-page-menu
+
+			// Specific Page Template styles
+			// List
+			&.ps-page-type-list {
+				#ps-page-menu {
+					top: 80px;
+					}// #ps-page-menu
+				#ps-page-main {
+					left: 220px;
+					}// ps-page-main
+				}// .ps-page-type-list
+
+			// Menu
+			&.ps-page-type-menu {
+				#ps-page-menu {
+					top: 124px;
+					}// #ps-page-menu
+				#ps-page-main {
+					left: 280px;
+					}// ps-page-main
+				}// .ps-page-type-menu
+			}// #ps-pag-content
+		}// .scrolled
+	}// #ps-page
+
+
+// -------- PAGE HEADER
+#ps-topbar {
+	width: 100%;
+	}// #ps-topbar
+
+
+// -------- PAGE FOOTER
+#ps-page-footer {
+	}// #page-footer

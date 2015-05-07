@@ -1,0 +1,321 @@
+// -------- TABLES
+.ps-table {
+	width: 100%;
+	font-size: 0.875em;
+	line-height: 125%;
+	tr {
+		color: tint($PS_Charcoal, 50%);
+		border-bottom: 1px solid tint($PS_Charcoal, 85%);
+		background-color: tint($PS_Slate, 95%);
+		td {
+			padding: 1em 0.5em;
+			background-color: transparent;
+			}// <td>
+
+		&:last-of-type {
+			border-bottom: 0;
+			}// :last-of-type
+
+		// <tr> Classes
+		&.unread {
+			color: $PS_Charcoal;
+			background-color: transparent;
+			td {
+				// #1,3, Sender, Name
+				&:nth-child(1),
+				&:nth-child(3) {
+					font-weight: bold;
+					}
+				}// <td>
+			}// .unread
+		&.starred {
+			td {
+				.star {
+					color: $PS_Olive;
+					}// .star
+				}// <td>
+			}// .starred
+		}// <tr>
+
+
+	// table.ps-table Classes
+	&.inbox {
+		border-right: 2px solid transparent;
+		tr {
+			@include unselectable;
+
+			.ps-icon.archive {
+				display: none;
+				}
+
+			&:hover {
+				border-right: 2px solid $PS_Olive;
+				.ps-icon.archive {
+					display: block;
+					}// .ps-icon
+				}// :hover
+
+			td {
+				vertical-align: middle;
+
+				// #1, Sender
+				&:nth-child(1) {
+					width: 25%;
+					padding-left: 1em;
+					}
+				// #2, Summary
+				&:nth-child(2) {
+					width: 55%;
+					}
+				// #3, Date
+				&:nth-child(3) {
+					width: 10%;
+					text-align: right;
+					}
+				// #4,5, Icons
+				&:nth-child(4),
+				&:nth-child(5) {
+					width: 5%;
+					text-align: center;
+					padding-right: 0;
+					}
+				// Cursors
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(4),
+				&:nth-child(5) {
+					cursor: pointer;
+					}// cursors
+				}// <td>
+			}// <tr>
+		}// .inbox
+	&.conversation {
+		tr {
+			td {
+				vertical-align: top;
+
+				// #1, Partner Avatar
+				&:nth-child(1) {
+					width: 20%;
+					padding-right: ($padding-base * 3);
+					text-align: right;
+					}
+				// #2, Summary
+				&:nth-child(2) {
+					width: 50%;
+					}
+				// #3, User Avatar
+				&:nth-child(3) {
+					width: 20%;
+					padding-left: ($padding-base * 3);
+					text-align: left;
+					}
+				// #4, Date
+				&:nth-child(4) {
+					width: 10%;
+					padding-right: ($padding-base * 1.5);
+					text-align: right;
+					}
+				// Unselectable
+				&:nth-child(1),
+				&:nth-child(3) {
+					@include unselectable;
+					}// unselectable
+				}// <td>
+			}// <tr>
+		}// .conversation
+	&.quotes {
+		border-right: 2px solid transparent;
+		tr {
+			@include unselectable;
+
+			.ps-icon.archive {
+				display: none;
+				}
+
+			&:hover {
+				border-right: 2px solid $PS_Olive;
+				.ps-icon.archive {
+					display: block;
+					}// .ps-icon
+				}// :hover
+
+			td {
+				vertical-align: top;
+
+				// #1, Sender
+				&:nth-child(1) {
+					width: 25%;
+					padding-left: 1em;
+					}
+				// #2, Summary
+				&:nth-child(2) {
+					width: 55%;
+					hr {
+						margin: ($padding-base * 0.5) auto;
+						}// <hr>
+					}
+				// #3, Date
+				&:nth-child(3) {
+					width: 10%;
+					text-align: right;
+					}
+				// #4,5, Icons
+				&:nth-child(4),
+				&:nth-child(5) {
+					width: 5%;
+					text-align: center;
+					padding-right: 0;
+					}
+				// Cursors
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(4),
+				&:nth-child(5) {
+					cursor: pointer;
+					}// cursors
+				}// <td>
+
+			&.unread {
+				td {
+					// #2, Summary
+					&:nth-child(2) {
+						width: 55%;
+						.item {
+							font-weight: bold;
+							}// .item
+						}
+					}// <td>
+				}// .unread
+			}// <tr>
+		}// .quotes
+	&.quote {
+		border-right: 2px solid transparent;
+		tr {
+			text-align: center;
+			@include body-font;
+			background-color: $white;
+			td {
+				vertical-align: top;
+				padding: 0.5em;
+
+				// #1, Quantity
+				&:nth-child(1) {
+					width: 10%;
+					}
+				// #2, Unit
+				&:nth-child(2) {
+					width: 10%;
+					}
+				// #3, Description
+				&:nth-child(3) {
+					width: 50%;
+					}
+				// #4, Unit Price
+				&:nth-child(4) {
+					width: 15%;
+					}
+				// #5, Extended Price
+				&:nth-child(5) {
+					width: 15%;
+					text-align: right;
+					}
+
+				&.label {
+					@include header-font;
+					}// .label
+				}// <td>
+			}// <tr>
+
+		thead {
+			tr {
+				&.ps-quote-head {
+					color: $PS_Charcoal;
+					text-align: left;
+					td {
+						padding: ($padding-base * 2) 0 ($padding-base * 4) 0;
+						}// <td>
+					.column {
+						padding-left: ($padding-base * 4);
+						&:last-of-type {
+							padding-left: $padding-base;
+							padding-right: ($padding-base * 2);
+							}// :last-of-type
+						}// .column
+					.ps-avatar {
+						margin-right: ($padding-base * 2);
+						}// .ps-avatar
+					.info {
+						.company {font-weight: bold;}
+						line-height: 150%;
+						}// .info
+					.ps-quote-info {
+						.date {
+							font-weight: bold;
+							margin-bottom: ($padding-base * 2);
+							}// .date
+						}// .ps-quote-info
+					}// .ps-quote-head
+
+				&.ps-table-head {
+					color: tint($PS_Slate, 25%);
+					border-style: solid;
+					border-width: 1px 0;
+					border-color: tint($PS_Charcoal, 85%);
+					text-transform: uppercase;
+					@include header-font;
+					}// .ps-table-head
+				}// <tr>
+			}// <thead>
+
+		tbody {
+			border-bottom: 1px solid tint($PS_Charcoal, 85%);
+			tr {
+				color: $PS_Charcoal;
+				}// <tr>
+			}// <tbody
+
+		tfoot {
+			tr {
+				text-align: right;
+				color: $PS_Charcoal;
+				border: 0;
+				td {
+					// #1, Spacer (colspan 3)
+					&:nth-child(1) {
+						width: 70%;
+						}
+					// #2, Line Title
+					&:nth-child(2) {
+						width: 15%;
+						border-bottom: 1px solid tint($PS_Charcoal, 85%);
+						}
+					// #3, Line Ammount
+					&:nth-child(3) {
+						width: 15%;
+						border-bottom: 1px solid tint($PS_Charcoal, 85%);
+						}
+
+					&.label {
+						color: tint($PS_Slate, 25%);
+						}// .label
+					}// <td>
+
+				&:first-of-type{
+					padding-top: $padding-base;
+					font-weight: bold;
+					td {
+						color: $PS_Charcoal;
+						}// <td>
+					}// :first-of-type
+				&:last-of-type {
+					font-weight: bold;
+					td {
+						color: $PS_Charcoal;
+						border: 0;
+						}// <td>
+					}// :last-of-type
+				}// <tr>
+			}// <tfoot>
+		}// .quote
+	}// .ps-table

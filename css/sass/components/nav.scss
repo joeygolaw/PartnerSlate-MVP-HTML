@@ -1,0 +1,91 @@
+// -------- NAV
+// Base Style for topbar menus
+ul.topbar-nav {
+	color: $PS_Slate;
+	font-size: 0.9375em;
+	@include input-font;
+	li {
+		position: relative;
+		display: inline-block;
+		vertical-align: text-top;
+		height: inherit;
+		@include box-sizing(border-box);
+		a {
+			display: inline-block;
+			height: inherit;
+			padding: ($padding-base * 2) $padding-base;
+			@include box-sizing(border-box);
+			&.button {
+				height: auto;
+				margin-top: $padding-base;
+				margin-left: $padding-base;
+				font-size: 1em;
+				}// .button
+			}// <a>
+
+		// Nested Sub-Menus
+		.ps-popover {
+			position: absolute;
+				top: 90%;
+				right: -1.8em;
+			display: none;
+			padding: $padding-base 0 ($padding-base * 1.5) 0;
+			color: $PS_Charcoal;
+			}// .ps-popover
+
+		// Page Topbar User Menu
+		&.ps-user-menu {
+			// Selector when user menu is toggled
+			&.toggled {
+				color: $PS_Olive;
+				& > a {
+					&:after {
+						border-color: $PS_Olive;
+						}// :after
+					&:hover {
+						color: $PS_Olive;
+						&:after {
+							border-color: $PS_Olive;
+							}// :after
+						}// :hover
+					}// > a
+
+				// Show nested sub-menu .popover
+				.ps-popover {
+					display: block;
+					}// .ps-popover
+				}// .toggled
+
+			// Containing link (first <a>)
+			& > a {
+				&:after {
+					content: "";
+					float: right;
+					display: inline-block;
+					width: 6px;
+					height: 6px;
+					margin-top: 2px;
+					margin-left: 1em;
+					border-width: 0 2px 2px 0;
+					border-style: solid;
+					border-color: tint($PS_Slate, 50%);
+					@include transform-rotate(45deg);
+					@include transition-general;
+					}// :after
+
+				&:hover {
+					color: $PS_Slate;
+					&:after {
+						border-color: $PS_Slate;
+						}// :after
+					}// :hover
+				&:active {
+					color: $PS_Charcoal;
+					&:after {
+						border-color: $PS_Charcoal;
+						}// :after
+					}// :active
+				}// > <a>
+			}// .ps-user-menu
+		}// <li>
+	}// ul.topbar-nav

@@ -1,0 +1,88 @@
+// --------- PS WHO
+#ps-panel-who {
+	position: relative;
+	max-height: $ps-slider-height;
+	@include box-sizing(border-box);
+	.ps-slider-banner {
+		height: $ps-slider-height;
+		}// .ps-slider-banner
+
+	.message-title {
+		white-space: nowrap;
+		}// .message-title
+	}// #ps-panel-who
+
+#ps-slider-manufacturer {
+	h1 span {
+		font-size: 0.875em;
+		letter-spacing: -0.015em;
+		}// <h1>
+	}// #ps-slider-manufacturer
+
+// Slider message container
+.slider-message {
+	position: absolute;
+		bottom: 0;
+		left: 0;
+	width: 61%;
+	height: 45%;
+	padding: 3em 0 0 4.5%;
+	@include opacity(0);
+	@include transition(opacity,300,ease-out);
+	p {
+		margin-bottom: 1.25em;
+		padding-right: 25%;
+		}// <p>
+	}// .slider-message
+
+.slider-product,
+.slider-producer {
+	@include unselectable;
+	}
+
+.slider-product {
+	overflow: hidden;
+	position: absolute;
+		top: 0;
+		left: 0;
+	width: 61%;
+	height: 55%;
+	img {
+		position: absolute;
+			top: 0;
+			left: 0;
+		display: block;
+		width: 100%;
+		height: auto;
+		}// <img>
+
+	// Dimmer
+	&:after {
+		z-index: 50;
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@include gradient-angle(-10deg,transparentize($black,1),0,transparentize($black,0.2),100%)
+		}// :after
+	}// .slider-product
+
+.slider-producer {
+	overflow: hidden;
+	position: absolute;
+		top: 0;
+		right: 0;
+	width: 39%;
+	height: inherit;
+	img {
+		position: absolute;
+		top: 0;
+		right: -10%;
+		width: auto;
+		height: 100%;
+		display: block;
+		}// <img>
+	}// .slider-producer

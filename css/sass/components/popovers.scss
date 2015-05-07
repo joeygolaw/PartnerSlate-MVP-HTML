@@ -1,0 +1,76 @@
+// -------- POPOVERS
+.ps-popover {
+	z-index: 200;
+	min-width: 260px;
+	border: 1px solid tint($PS_Slate,50%);
+	@include box-shadow(0,4px,12px,0,0.12);
+	
+	// Popover List
+	ul.ps-panel-list {
+		li {
+			&:hover {
+				color: $PS_Olive;
+				background-color: tint($PS_Slate,99%);
+				border-color: transparent;
+				a:hover {
+					color: inherit;
+					}// a:hover
+				a:active {
+					color: $PS_Charcoal;
+					}// a:active
+				}// :hover
+
+			&:first-child {
+				@include round(top,right,($ps-panel-radius / 2));
+				}// :first-child
+
+			&:last-child {
+				@include round(bottom,left,($ps-panel-radius / 2));
+				a {
+					border: 0;
+					}// <a>
+				}// :last-child
+			}// <li>
+		}// ul.ps-panel-list
+	}// .ps-popover
+
+	// Page Overlays
+	body.page-overlay {
+		overflow: hidden;
+		}
+	// Overlau wrapper
+	.ps-page-overlay {
+		z-index: 1000;
+		position: fixed;
+			top: 0;
+			left: 0;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+
+		// Page Dimmer
+		.page-dimmer {
+			position: absolute;
+				top: 0;
+				left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: transparentize($PS_Charcoal, 0.25);
+			}// .page-dimmer
+
+		.ps-popover {
+			position: absolute;
+				top: 25%;
+				left: 50%;
+			width: 360px;
+			margin-left: -180px;
+			padding: ($padding-base * 1.5) ($padding-base * 3);
+			color: $PS_Slate !important;
+			.ps-panel-section {
+				padding: ($padding-base * 1.5) 0;
+				&:last-of-type {
+					padding-bottom: 0;
+					}// :last-of-type
+				}// .ps-panel-section
+			}// .ps-panel
+		}// .ps-page-popover

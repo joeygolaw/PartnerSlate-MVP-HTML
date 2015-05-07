@@ -1,0 +1,73 @@
+// ---------- PS WHY
+#ps-panel-why {
+	padding: 0 !important;
+
+	.why-divider {
+		width: 75%;
+		margin: 0 auto;
+		}// .why-divider
+
+	.column {
+		padding: 3.75em 0;
+		}// .column
+
+	p {
+		font-size: 0.9375em;
+		padding: 0 20%;
+		}// <p>
+
+	// Brands
+	#why-brands {
+		border-right: 1px solid tint($PS_Slate,75%);
+
+		// Handshake
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+				top: 50%;
+				left: 100%;
+			width: 7.5em;
+			height: 7.5em;
+			margin: -3.5em 0 0 -3.75em;
+			background-repeat: no-repeat;
+			background-image: url('../img/ps-why-handshake.png');
+			background-color: $white;
+			@include background-size(7.5em,7.5em);
+			}// :after
+		}// #why-brands
+
+	// Suppliers
+	#why-suppliers {
+		p {
+			padding: 0 34%;
+			}// <p>
+
+		// Crops
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+				top: 50%;
+			width: 32%;
+			height: 50%;
+			margin-top: -9%;
+			background-repeat: no-repeat;
+			background-image: url('../img/ps-why-crops.png');
+			background-color: transparent;
+			@include background-sizeNN(contain);
+			}// :after, :before
+
+			// Left Crops
+			&:before {
+				left: 2%;
+				@include transform-scaleX(-1);
+				}// :before
+
+			// Right Crops
+			&:after {
+				right: 2%;
+				}// :after
+		}// #why-suppliers
+	}// #ps-panel-why

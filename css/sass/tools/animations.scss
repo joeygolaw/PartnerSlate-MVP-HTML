@@ -1,0 +1,12 @@
+/*------------------------------- ANIMATIONS */
+// Animations from: http://daneden.me/animate/
+
+
+//----------- Mixins
+// General Animation Mixin
+@mixin animate($type) {
+	-webkit-animation-name: $type;
+	-moz-animation-name: $type;
+	-o-animation-name: $type;
+	animation-name: $type;
+	}

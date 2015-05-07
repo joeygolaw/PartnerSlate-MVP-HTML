@@ -1,0 +1,72 @@
+// ---------- 800 PX
+@media only screen and (max-width: 800px) {
+
+	h1 {
+		font-size: 1.75em;
+		}
+	h2 {
+		font-size: 1.25em;
+		}
+	h3 {
+		font-size: 1.125em;
+		}
+
+	#ps-topbar {
+		.button.outline {
+			float: left;
+			right: 0;
+			margin-left: 6%;
+			}// button.outline
+
+		&.fixed {
+			.button.outline {
+				float: right;
+				right: 0;
+				margin-left: 0;
+				}// button.outline
+			}// .fixed
+		}// #ps-topbar
+
+	#ps-page-footer {
+		.ps-logotype {
+			display: none;
+			}// .ps-logotype
+		}// #ps-page-footer
+
+	.slider-product {
+		width: 58%;
+		}// .slider-product
+
+	.slider-producer {
+		width: 42%;
+		img {
+			right: -30%;
+			}// <img>
+		}// .slider-producer
+
+	.slider-message {
+		width: 58%;
+		font-size: 0.9375em;
+		p {
+			padding-right: 10%;
+			}// <p>
+		}// .slider-message
+
+	#ps-panel-how {
+		p {
+			font-size: 0.8125em;
+			}// <p>
+		}// #ps-panel-how
+
+	#ps-panel-why {
+		p {
+			font-size: 0.875em;
+			}// <p>
+		}// #ps-panel-why
+
+	#ps-panel-signup {
+		p {
+			font-size: 0.9375em;
+			}// <p>
+		}// #ps-panel-signup
+	}// 800 PX

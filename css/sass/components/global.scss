@@ -1,0 +1,50 @@
+// -------- BODY
+html {
+	background-color: $body-bg-color;
+	}
+
+body {
+	overflow-x: hidden;
+	max-width: $max-page-width;
+	min-width: $min-page-width;
+	min-height: $min-page-height;
+	margin: 0 auto;
+	background-color: inherit;
+	@include body-font;
+	@include text-legibility;
+	}
+
+
+// Selection Color
+::selection {
+	background-color: transparentize($PS_Olive,0.75);
+	color: $black;
+	}
+
+
+// Base link style
+a {
+	color: inherit;
+	text-decoration: none;
+ 	@include tap-highlight-color(transparentize($PS_Olive,0.05));// Set iOS tap highligt
+	&:hover {
+		color: $PS_Charcoal;
+		}
+	&:active {
+		color: $black;
+		}// :active
+	}// <a>
+
+
+// -------- ALIGNMENT
+.clear {clear: both;}
+.pull-left {float: left;}
+.pull-right {float: right;}
+
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+
+
+// -------- DISPLAY
+.hidden {display: none;}

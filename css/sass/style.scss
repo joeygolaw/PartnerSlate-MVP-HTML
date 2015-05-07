@@ -1,0 +1,81 @@
+
+
+
+// Theme Name: PartnerSlate MVP
+// Author: Joey Golaw
+// Version: 0.3
+
+
+
+// -------- NOTES
+// 0.1: Initial Build
+// 0.2: Second Build
+//		- CHANGED: renamed "headers.scss" to "topbars.scss" 
+//		- CHANGED: main page selectors from class's to id's (i.e. ".ps-page-menu" to "#ps-page-menu", ".ps-page-main" to "#ps-page-main")
+//		- ADDED: selector for when page is scrolled, currently used for fixing #ps-page-menu to top of page
+//		- CHANGED: .ps-user-menu to display when clicked instead of hovered
+//		- ADDED: input[type="checkbox"] styling
+//		- CHANGED: de-specified .ps-panel-list sub styles, broader styles added
+// 0.3: Third Build
+//		- 
+
+// ***** FUTURE UPDATES *****
+// - consolidate styles w/ those on current partnerslate.com Landing Page, mainly headers and type
+// - add functionality to hide .ps-user-menu when it is displayed and the user clicks outside the menu
+
+
+
+/* -------- RESOURCES */
+@import "tools/html-reset-1.0.2";
+@import "tools/general-mixins+variables-1.0.3";
+@import "tools/mixins+variables";
+// @import "tools/animations";
+
+/* -------- BEGIN STYLESHEET */
+@import "components/global";
+@import "components/grid";
+@import "components/page";
+@import "components/panels";
+@import "components/branding";
+@import "components/type";
+@import "components/buttons";
+@import "components/forms";
+@import "components/labels";
+@import "components/topbars";
+@import "components/nav";
+@import "components/icons";
+@import "components/images";
+@import "components/pagination";
+@import "components/footer";
+@import "components/popovers";
+@import "components/tables";
+
+/* -------- PAGE TYPES */
+@import "components/pages/menu";
+@import "components/pages/list";
+@import "components/pages/profile";
+@import "components/pages/single";
+
+/* -------- PAGES */
+/* Landing Page */
+@import "components/unslider.js";
+@import "components/mailchimp";
+/* Landing Page, Sections */
+@import "sections/ps-who";
+@import "sections/ps-how";
+@import "sections/ps-why";
+@import "sections/ps-signup";
+@import "sections/ps-landing-page";
+
+/* -------- BREAKPOINTS */
+@import "breakpoints/1200px";
+@import "breakpoints/1000px";
+@import "breakpoints/900px";
+@import "breakpoints/800px";
+@import "breakpoints/720px";
+@import "breakpoints/640px";
+@import "breakpoints/520px";
+@import "breakpoints/320px";
+
+/* -------- DEV */
+

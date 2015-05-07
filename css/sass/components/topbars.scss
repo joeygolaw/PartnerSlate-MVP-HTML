@@ -1,0 +1,111 @@
+// ---------- PS.com Topbar
+#ps-topbar {
+	z-index: 500;
+	position: fixed;
+		top: 0;
+		left: 0;
+	height: $ps-topbar-height;
+	padding: 0 ($padding-base * 6);
+	text-align: right;
+	background-color: $white;
+	border-bottom: 1px solid tint($PS_Slate,80%);
+	@include unselectable;
+	@include box-shadow(0,4px,0,0,0.02);
+	@include box-sizing(border-box);
+	@include transition(background,100,linear);
+
+	// All first children
+	& > * {
+		height: inherit;
+		}
+
+	.ps-lockup {
+		display: block;
+		width: auto;
+		margin-left: $padding-base * 2;
+		padding-top: ($padding-base * 1.2);
+		@include box-sizing(border-box);
+		}// .ps-lockup
+
+		.ps-logo {
+			margin-right: 0.25em;
+			width: 1.25em;
+			}// .ps-logo
+
+		.ps-logotype {
+			color: $PS_Slate;
+			font-size: 1.5em;
+			line-height: 133%;
+			}// .ps-logotype
+
+	// Search bar
+	.topbar-search {
+		position: relative;
+		margin-top: ($padding-base * 1.5);
+		margin-left: ($padding-base * 3);
+		}// .topbar-search
+
+	// Reduce padding on nested menus
+	ul.topbar-nav {
+		margin-right: $padding-base * 3;
+		li ul {
+			li {
+				.list-item {
+					padding: ($padding-base * 1.2) $padding-base;
+					}// .list-item
+				}// <li>
+			}// <li><ul>
+		}// ul.topbar-nav
+	}// #ps-topbar
+
+// ---------- Page Topbar
+#ps-page-topbar {
+	z-index: 100;
+	width: 100%;
+	height: $ps-page-topbar-height + 1px;
+	padding: 0 ($padding-base * 3);
+	text-align: right;
+	background-color: tint($PS_Charcoal,25%);
+	border-bottom: 1px solid $white;
+	@include unselectable;
+	@include box-sizing(border-box);
+
+	&.fixed {
+		position: fixed;
+		}// .fixed
+
+	// All first children
+	& > * {
+		height: inherit;
+		}
+
+		ul.topbar-nav {
+			color: $white;
+			font-weight: bold;
+			font-size: 0.875em;
+			li {
+				a {
+					padding: ($padding-base * 1.5) $padding-base;
+					&:hover {
+						color: $white;
+						text-decoration: underline;
+						}// :hover
+					&:active {
+						color: $PS_Charcoal;
+						}// :active
+					}// <a>
+
+				// current tab style
+				&.current {
+					color: $white;
+					background-color: $PS_Charcoal;
+					a:hover,
+					a:active {
+						cursor: default;
+						color: $white;
+						text-decoration: none;
+						}// :hover
+					}// .currents
+				}// <li>
+			}// ul.topbar-nav
+	}// #ps-page-topbar

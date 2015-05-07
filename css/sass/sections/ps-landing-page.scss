@@ -1,0 +1,65 @@
+// -------------------- LANDING PAGE
+body#ps-landing-page {
+
+	// ---------- HEADER
+	#ps-topbar {
+		position: relative;
+		height: 100px;
+		padding: 1.75em 4.5%;
+		background-color: transparentize($white,1);
+		border-bottom: 1px solid transparent;
+		@include no-box-shadow;
+
+		.ps-logo {
+			margin-right: 0.25em;
+			}// .ps-logo
+
+		.ps-logotype {
+			color: $white;
+			font-size: 2em;
+			line-height: 150%;
+			}// .ps-logotype
+
+		.button.outline {
+			position: relative;
+				top: 0.75em;
+				right: 42.5%;
+			color: $white;
+			border-color: $white;
+			background-color: transparent;
+			&:hover {
+				color: $PS_Olive;
+				border-color: $PS_Olive;
+				}// :hover
+			}// .button.outline
+
+		&.fixed {
+			position: fixed;
+			height: $ps-topbar-height;
+			padding: 0 4.5%;
+			background-color: $white;
+			border-bottom: 1px solid tint($PS_Slate,80%);
+			@include unselectable;
+			@include box-shadow(0,4px,0,0,0.02);
+
+			.ps-logotype {
+				color: $white;
+				font-size: 2em;
+				line-height: 150%;
+				}// .ps-logotype
+
+			.button.outline {
+				position: relative;
+					top: 0;
+					right: 0;
+				color: $PS_Olive;
+				border-color: $PS_Olive;
+				background-color: transparent;
+				&:hover {
+					color: $PS_Charcoal;
+					border-color: $PS_Charcoal;
+					}// :hover
+				}// .button.outline
+			}// .fixed
+		}// #ps-topbar
+	}// body#ps-landing-page

@@ -1,0 +1,26 @@
+// ---------- FOOTER
+#ps-page-footer {
+	padding: 1.5em 2em;
+	border-top: 1px solid tint($PS_Slate, 75%);
+	background-color: inherit;
+
+	span {
+		display: inline-block;
+		color: tint($PS_Slate,50%);
+		}
+
+	.ps-logotype {
+		color: $PS_Slate;
+		margin-right: 1em;
+		}// .ps-logotype
+	.ps-slogan {
+		margin-right: 0.5em;
+		font-size: 0.875em;
+		line-height: 250%;
+		@include header-font;
+		}// .ps-slogan
+	.copyright-text {
+		font-size: 0.75em;
+		line-height: 250%;
+		}// .copyright-text
+	}// #ps-page-footer

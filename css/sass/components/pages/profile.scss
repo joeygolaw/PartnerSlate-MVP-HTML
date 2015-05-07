@@ -1,0 +1,121 @@
+// ------------- Profile Page Type
+.ps-page-type-profile {
+	margin-top: $ps-topbar-height + ($padding-base * 2);
+
+	#ps-page-main {
+		width: 660px;
+		.ps-panel {
+			z-index: 30;// move above .ps-profile-cover
+			min-height: 460px;
+			margin-top: -10px;// move above .ps-profile-cover
+			padding: 0 ($padding-base * 2) !important;
+			}// .ps-panel
+		}// #ps-page-main
+
+	#ps-page-sidebar {
+		position: relative;
+		width: 260px;
+		margin-top: 230px;// height of .ps-profile-cover.medium + $padding-base
+		margin-left: ($padding-base * 2);
+
+		.ps-profile-actions {
+			position: absolute;
+				top: -56px; // height of content + ($padding-base * 2)
+				left: $padding-base;
+			}// .ps-profile-actions
+
+		.ps-panel {
+			margin-bottom: ($padding-base * 1.5);
+			padding-bottom: $padding-base;
+			&:last-of-type {
+				margin-bottom: 0;
+				}// :last-of-type
+			}// .ps-panel
+
+		ul.ps-panel-list {
+			color: $PS_Charcoal;
+			li {
+				font-size: 0.875em;
+				.list-item {
+					padding-top: $padding-base;
+					padding-bottom: $padding-base;
+
+					.subtitle {
+						font-size: inherit;
+						}// .subtitle
+					}// .list-item
+				}// <li>
+			}// ul.ps-panel-list
+		}// #ps-page-sidebar
+
+
+	.ps-profile-cover {
+		z-index: 10;
+		background-color: $PS_Slate;
+		@include round(top,right,$ps-panel-radius);
+
+		img {
+			@include round(top,right,$ps-panel-radius);
+			}// <img>
+
+		.cover-overlay {
+			z-index: 20;// move above .ps-profile-cover
+			display: block;
+			position: absolute;
+				top: 0;
+				left: 0;
+			width: inherit;
+			height: inherit;
+			@include gradient-angle(-190deg,transparentize($body-bg-color,1.0),33%,$body-bg-color,100%);
+			}// .cover-overlay
+		}// .ps-profile-cover
+
+
+	.ps-profile-head {
+		cursor: pointer;
+		position: relative;
+		padding: 0 0 ($padding-base * 1.5) (($padding-base * 2) + 120px);
+
+		.info {
+			width: 100%;
+			padding-top: $padding-base;
+			padding-bottom: ($padding-base * 2.5);
+			color: tint($PS_Charcoal, 25%);
+			border-bottom: 1px solid tint($PS_Charcoal, 85%);
+			.name {
+				font-size: 1.25em;
+				font-weight: bold;
+				color: $PS_Charcoal;
+				margin-bottom: $padding-base;
+				}// .name
+			.tagline {
+				font-size: 0.9375em;
+				margin-bottom: ($padding-base * 0.5);
+				}// .tagline
+			.location {
+				font-size: 0.8125em;
+				}// .location
+			.meta {
+				font-size: 0.8125em;
+				}// .meta
+			}// .info
+
+		.ps-avatar {
+			position: absolute;
+				top: 0;
+				left: ($padding-base * 1.5);
+			margin-right: ($padding-base * 2);
+			}// .ps-avatar
+
+		&:hover {
+			& * {
+				color: $PS_Charcoal !important;
+				}// *
+			}// :hover
+		}// .ps-profile-head
+
+
+	.ps-profile-body {
+		padding: ($padding-base * 2);
+		}// .ps-profile-body
+	}// .ps-page-type-profile

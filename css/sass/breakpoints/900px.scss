@@ -1,0 +1,32 @@
+// ---------- 900 PX
+@media only screen and (max-width: 900px) {
+
+	.slider-producer {
+		img {
+			right: -25%;
+			}// <img>
+		}// .slider-producer
+
+	.slider-product {
+		img {
+			width: auto;
+			height: 102%;
+			}// <img>
+		}// .slider-product
+
+	#ps-panel-why {
+		p {
+			padding: 0;
+			}// <p>
+
+		#why-brands {
+			padding-right: 12%;
+			padding-left: 4%;
+			}// #why-brands
+
+		#why-manufacture {
+			padding-left: 12%;
+			padding-right: 4%;
+			}// #why-manufacture
+		}// #ps-panel-why
+	}// 900 PX

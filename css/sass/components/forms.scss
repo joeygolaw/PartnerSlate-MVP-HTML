@@ -1,0 +1,350 @@
+//---------- FORMS
+form {
+	font-size: 1em;
+	@include input-font;
+
+	.input-row {
+		text-align: left;
+		margin-bottom: ($padding-base * 1.5);
+		}// .input-row
+	.form-actions {
+		margin-top: ($padding-base * 3);
+		}// .input-row
+	}// <form>
+
+
+// Input Base Styles
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+input[type="checkbox"],
+select,
+.dropdown-field {
+	max-width: $input-max-width;
+	border: 1px solid $input-border-color;
+	background-color: transparent;
+	word-wrap: break-word;
+	font-family: inherit;
+	@include text-legibility;// Mac-only font improvement
+	@include box-sizing(border-box);
+	@include transition((background,border,color),100,linear);
+
+	&:disabled {
+		}
+	}// Input Base Styles
+
+
+// Text Inputs
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select,
+.dropdown-field {
+	width: 100%;
+	padding: ($padding-base * 0.6) ($padding-base * 2);
+	color: $PS_Charcoal;
+	letter-spacing: 0.01em;
+	text-align: inherit;
+	background-color: transparent;
+	@include round-all(1.5em);
+	@include input-placeholder-color(tint($PS_Slate,50%));
+
+	&:focus {
+		color: $black;
+		border-color: $PS_Olive;
+		background-color: $white;
+		@include input-placeholder-color(transparent);
+		}// :focus
+
+	&:disabled {
+		color: tint($PS_Slate,75%);
+		border-color: tint($PS_Slate,75%);
+		@include input-placeholder-color(tint($PS_Slate,75%));
+
+		&:hover {
+			border-color: transparent;
+			}// :hover
+		}// :disabled
+	}// Text Inputs
+
+label {
+	vertical-align: middle;
+	display: inline-block;
+	font-size: 0.9375em;
+	font-weight: normal;
+	color: $PS_Slate;
+
+	// Label selector for .input-row's
+	&.row-label {
+		vertical-align: top;
+		width: 150px;
+		margin-top: 0.5em;
+		padding-right: ($padding-base * 2);
+		text-align: right;
+		}// .row-label
+	}// <label>
+
+.input-help-text {
+	display: inline-block;
+	max-width: 340px;
+	padding: $padding-base;
+	color: tint($PS_Slate, 25%);
+	font-size: 0.8125em;
+	line-height: 125%;
+	a {
+		text-decoration: underline;
+		}
+	}// .input-help-text
+
+fieldset {
+	}// fieldset
+
+
+
+//---------- Individual Field Styles
+// Search
+input.ps-search-bar {
+	position: relative;
+	min-width: 200px;
+	text-align: left;
+
+	// When has value, color search icon
+	&:focus,
+	&:not([value='']) {
+		& ~ .ps-icon {
+			border-color: $PS_Olive;
+			&:after {
+				background-color: $PS_Olive;
+				}// :after
+			}// ~ .ps-icon
+		}// :not([value=""]), :focus
+	}// .ps-search-bar
+
+// Text
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	font-size: 0.9375em;
+	}
+
+// Textarea
+textarea {
+	resize: none;
+	min-height: 42px;
+	font-size: 0.875em;// 14px
+	}
+
+// Select
+select {
+	}// <select>
+
+// Custom Dropdown field wrapper
+.dropdown-field {
+	position: relative;
+	overflow: hidden;
+	height: 2em;
+	padding: 0;
+	@include unselectable;
+
+	// Wrapper for dropdown options
+	.dropdown-options {
+		position: absolute;
+			top: -1px;
+			left: -1px;
+		width: 100%;
+		background-color: $white;
+		@include round-all(1em);
+
+		li {
+			cursor: pointer;
+			display: none;
+			margin-left: ($padding-base * 2);
+			padding: 0.5em $padding-base;
+			color: tint($PS_Slate, 50%);
+			border-bottom: 1px solid $border-color;
+			background-color: transparent;
+			@include box-sizing(border-box);
+
+			&:last-of-type {
+				border-bottom: 0;
+				}// :last-of-type
+
+			// Wrapper for current selection
+			&.current-selection {
+				display: block;
+				width: 100%;
+				margin-left: 0;
+				padding-left: ($padding-base * 2);
+				padding-right: ($padding-base * 1.5);
+				color: $PS_Charcoal;
+				border-color: tint($PS_Slate, 50%);
+	
+				// Toggle arrow
+				&:after {
+					content: "";
+					float: right;
+					display: inline-block;
+					width: 6px;
+					height: 6px;
+					margin-top: 3px;
+					margin-right: 0.5em;
+					border-width: 0 2px 2px 0;
+					border-style: solid;
+					border-color: tint($PS_Slate, 50%);
+					@include transform-rotate(45deg);
+					@include transition-general;
+					}// :after
+				}// &.current-selection
+
+			&.selected {
+				position: relative;
+				color: $PS_Olive !important;
+				&:before {
+					content: "";
+					display: block;
+					position: absolute;
+						top: 50%;
+						right: 1.5em;
+					width: 4px;
+					height: 11px;
+					margin-top: -9px;
+					border-style: solid;
+					border-width: 0 2px 2px 0;
+					border-color: $PS_Olive;
+					@include transform-rotate(40deg);
+					}// :before
+				&:hover {
+					cursor: default;
+					color: $PS_Olive !important;
+					}// :hover
+				}// &.selected
+
+			&:hover {
+				color: $PS_Charcoal !important;
+				}// :hover
+			}// <li>
+		}// .dropdown-options
+
+	&.toggled {
+		overflow: visible;
+		.dropdown-options {
+			z-index: 1000;
+			li {
+				display: block;
+				color: tint($PS_Slate, 25%);
+				&.current-selection {
+					color: $PS_Charcoal;
+					&:after {
+						margin-top: 6px;
+						border-color: $PS_Slate;
+						@include transform-rotate(-135deg);
+						}// :after
+					}// .current-selection
+				}// <li>
+			}// .dropdown-options
+		}// .toggled
+
+	&.make-button {
+		&.toggled {
+			.dropdown-options {
+				background-color: $white;
+				}// .dropdown-options
+			}// .toggled
+
+		.dropdown-options {
+			background-color: tint($PS_Slate, 95%);
+			@include round(top,right,1em);
+			@include round(bottom,left,1em);
+
+			li {
+				&.current-selection {
+					color: $PS_Slate;
+					font-weight: bold;
+					// Toggle arrow
+					&:after {
+						border-color: tint($PS_Slate, 25%);
+						}// :after
+					}// &.current-selectionz
+				}// <li>
+			}// .dropdown-options
+
+		&:hover {
+			border-color: tint($PS_Slate, 50%);
+			@include box-shadow(0,1px,1px,0,0.1);
+			li {
+				&.current-selection {
+					color: $PS_Slate !important;
+					}// .current-selection
+				}// <li>
+			}// :hover
+		}// .make-button
+	}// .dropdown-field
+
+// Checkbox
+input[type="checkbox"] {
+	cursor: pointer;
+	position: relative;
+		top: 2px;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	background-color: transparent;
+	@include round-all(0.3125em);
+
+	// Label
+	& + .checkbox-label {
+		display: inline-block;
+		margin-left: $padding-base;
+		color: $PS_Slate;
+		font-size: 0.9375em;
+		}// + .checkbox-label
+
+	// Checked
+	&:checked {
+		position: relative;
+		border-color: transparent;
+
+		// Checkmark
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+				top: 50%;
+				left: 3px;
+			width: 4px;
+			height: 11px;
+			margin-left: 1px;
+			margin-top: -8px;
+			border-style: solid;
+			border-width: 0 3px 3px 0;
+			border-color: $PS_Olive;
+			@include transform-rotate(40deg);
+			}// :before
+		}
+	&:checked + .checkbox-label {
+		color: $PS_Charcoal;
+		}
+
+	// Disabled
+	&:disabled + .checkbox-label {
+		color: tint($PS_Slate, 75%);
+		}
+	}// Checkbox
+
+// Radios
+input[type="radio"] {
+	@include appearance(radio);
+
+	& + label {
+		}
+
+	// Checked
+	&:checked + label {
+		}
+
+	// Disabled
+	&:disabled + label {
+		}
+	}// Radios

@@ -1,0 +1,60 @@
+// ------------- Single Page Type
+.ps-page-type-single {
+	margin-top: $ps-topbar-height;
+	padding-top: (($ps-page-topbar-height + 1px) + ($padding-base * 2));
+
+	.ps-panel {
+		.ps-panel-section {
+			padding: ($padding-base * 2);
+			}// .ps-panel-section
+		}// .ps-panel
+
+	// Pagination
+	.ps-toolbar {
+		.toolbar-title {
+			margin: 0.5em 0 0 1em;
+			color: $PS_Slate;
+			font-weight: normal;
+			a {
+				color: $PS_Charcoal;
+				text-decoration: underline;
+				font-weight: bold;
+				}// <a>
+			}// .toolbar-title
+
+		.ps-pagination {
+			li {
+				margin-right: ($padding-base * 0.5);
+				a {
+					padding: 0.6125em 1em;
+					color: $PS_Slate;
+					border-color: tint($PS_Slate, 75%);
+					background-color: tint($PS_Slate, 95%);
+
+					&:hover {
+						border-color: tint($PS_Slate, 50%);
+						@include box-shadow(0,1px,1px,0,0.1);
+						}// :hover
+					&:active {
+						border-color: tint($PS_Slate, 75%);
+						@include no-box-shadow;
+						}// :active
+					}// <a>
+
+				&.current {
+					a {
+						border: 1px solid $PS_Olive;
+						background-color: transparent;
+						}// <a>
+					}// .current
+				}// <li>
+
+			& + .pagination-count {
+				margin-right: ($padding-base * 2);
+				color: $PS_Slate;
+				font-size: 0.875em;
+				line-height: 250%;
+				}// & + .pagination-count
+			}// .ps-pagination
+		}// .ps-toolbar
+	}// .ps-page-type-single

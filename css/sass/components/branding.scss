@@ -1,0 +1,23 @@
+// ---------- BRANDING
+.ps-logotype {
+	vertical-align: text-top;
+	display: inline-block;
+	font-size: 1.5em;
+	font-weight: 200;
+	line-height: 0.5em;
+	letter-spacing: -0.03em;
+	@include header-font;
+	@include text-legibility();
+	}// .ps-logotype
+
+.ps-logo {
+	vertical-align: text-top;
+	display: inline-block;
+	overflow: hidden;
+	width: 2em;
+	height: 3.15em;
+	background-repeat: no-repeat;
+	background-image: url('../img/ps-logo.png');
+	background-position: 0 0;
+	@include background-sizeNN(contain);
+	}// .ps-logo

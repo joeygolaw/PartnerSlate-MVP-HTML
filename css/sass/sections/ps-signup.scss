@@ -1,0 +1,6 @@
+// --------- PS SIGNUP
+#ps-panel-signup {
+	padding: 5.625em 0 4.375em 0;
+	border-top: 1px solid tint($PS_Slate,50%);
+	@include gradient-tb(tint($PS_Slate,95%),0%,$white,100%);
+	}// #ps-panel-signup
