@@ -2,6 +2,7 @@
 // Avatars
 .ps-avatar {
 	display: inline-block;
+	@include unselectable;
 	img {
 		display: inline-block;
 		width: inherit;
@@ -12,6 +13,10 @@
 	&.large {
 		width: 100px;
 		height: 100px;
+		}// .large
+	&.medium {
+		width: 64px;
+		height: 64px;
 		}// .large
 	&.small {
 		width: 48px;

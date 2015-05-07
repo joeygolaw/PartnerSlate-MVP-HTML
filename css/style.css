@@ -1247,7 +1247,12 @@ ul.topbar-nav {
       border-top-right-radius: 3px; }
 
 .ps-avatar {
-  display: inline-block; }
+  display: inline-block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   .ps-avatar img {
     display: inline-block;
     width: inherit;
@@ -1255,6 +1260,9 @@ ul.topbar-nav {
   .ps-avatar.large {
     width: 100px;
     height: 100px; }
+  .ps-avatar.medium {
+    width: 64px;
+    height: 64px; }
   .ps-avatar.small {
     width: 48px;
     height: 48px; }
@@ -1637,29 +1645,44 @@ body.page-overlay {
     .ps-page-type-list #ps-page-main .search-filters .ps-label-group {
       width: 480px;
       margin-top: 10px; }
-    .ps-page-type-list #ps-page-main .search-results {
-      margin-top: 5px; }
+    .ps-page-type-list #ps-page-main .search-section {
+      padding-bottom: 0;
+      border-bottom: 0; }
+      .ps-page-type-list #ps-page-main .search-section h3.title {
+        margin-bottom: 15px;
+        padding: 0.5em 0.75em;
+        color: #959a9c;
+        font-weight: normal;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        border-color: #d4d8dd;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box; }
     .ps-page-type-list #ps-page-main .search-item {
       cursor: pointer;
       position: relative;
-      padding: 0 0 15px 140px; }
+      padding-left: 90px;
+      margin-bottom: 15px; }
       .ps-page-type-list #ps-page-main .search-item:last-of-type .info {
         border-bottom: 0; }
       .ps-page-type-list #ps-page-main .search-item .info {
         width: 100%;
-        padding-top: 10px;
-        padding-bottom: 25px;
+        padding-top: 2px;
+        padding-bottom: 15px;
         color: #60676a;
         border-bottom: 1px solid #dfe0e1; }
         .ps-page-type-list #ps-page-main .search-item .info .name {
-          font-size: 1.125em;
+          font-size: 1em;
           color: #2B3539;
           margin-bottom: 5px; }
         .ps-page-type-list #ps-page-main .search-item .info .location {
           font-size: 0.75em;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          margin-bottom: 15px; }
+          color: #959a9c;
+          text-transform: capitalize;
+          letter-spacing: 0.02em;
+          margin-bottom: 10px; }
         .ps-page-type-list #ps-page-main .search-item .info .tagline {
           font-size: 0.875em;
           margin-bottom: 5px; }
@@ -1668,10 +1691,29 @@ body.page-overlay {
       .ps-page-type-list #ps-page-main .search-item .ps-avatar {
         position: absolute;
         top: 0;
-        left: 15px;
+        left: 0;
         margin-right: 20px; }
-      .ps-page-type-list #ps-page-main .search-item:hover * {
-        color: #2B3539 !important; }
+      .ps-page-type-list #ps-page-main .search-item:hover .info:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        width: 6px;
+        height: 6px;
+        margin-top: -12px;
+        border-style: solid;
+        border-color: #959a9c;
+        border-width: 2px 2px 0 0;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .ps-page-type-list #ps-page-main .search-item:active .name {
+        color: #0C9; }
+      .ps-page-type-list #ps-page-main .search-item:active .info:after {
+        border-color: #0C9; }
     .ps-page-type-list #ps-page-main .search-pagination {
       position: relative;
       color: #567;
