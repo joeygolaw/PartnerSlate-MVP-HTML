@@ -1,26 +1,39 @@
 // ---------- FOOTER
 #ps-page-footer {
-	padding: 1.5em 2em;
+	padding: ($padding-base * 3) ($padding-base * 5);
 	border-top: 1px solid tint($PS_Slate, 75%);
 	background-color: inherit;
+	color: tint($PS_Slate,50%);
 
 	span {
 		display: inline-block;
-		color: tint($PS_Slate,50%);
 		}
 
 	.ps-logotype {
 		color: $PS_Slate;
 		margin-right: 1em;
+		line-height: 125%;
 		}// .ps-logotype
 	.ps-slogan {
 		margin-right: 0.5em;
 		font-size: 0.875em;
-		line-height: 250%;
 		@include header-font;
 		}// .ps-slogan
 	.copyright-text {
 		font-size: 0.75em;
-		line-height: 250%;
 		}// .copyright-text
+
+	ul {
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		margin-left: ($padding-base * 3);
+		li {
+			font-size: 0.75em;
+			line-height: 150%;
+			a {
+				
+				}// <a>
+			}// <li>
+		}// <ul>
 	}// #ps-page-footer

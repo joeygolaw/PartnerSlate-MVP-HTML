@@ -1388,23 +1388,30 @@ ul.topbar-nav {
         background-color: #f6f7f8 !important; }
 
 #ps-page-footer {
-  padding: 1.5em 2em;
+  padding: 30px 50px;
   border-top: 1px solid #d4d8dd;
-  background-color: inherit; }
+  background-color: inherit;
+  color: #aab2bb; }
   #ps-page-footer span {
-    display: inline-block;
-    color: #aab2bb; }
+    display: inline-block; }
   #ps-page-footer .ps-logotype {
     color: #567;
-    margin-right: 1em; }
+    margin-right: 1em;
+    line-height: 125%; }
   #ps-page-footer .ps-slogan {
     margin-right: 0.5em;
     font-size: 0.875em;
-    line-height: 250%;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   #ps-page-footer .copyright-text {
-    font-size: 0.75em;
-    line-height: 250%; }
+    font-size: 0.75em; }
+  #ps-page-footer ul {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin-left: 30px; }
+    #ps-page-footer ul li {
+      font-size: 0.75em;
+      line-height: 150%; }
 
 .ps-popover {
   z-index: 200;
