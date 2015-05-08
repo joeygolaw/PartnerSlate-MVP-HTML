@@ -1,4 +1,27 @@
 // -------- IMAGES
+// Undefined Images
+.img-undefined {
+	position: relative;
+	border: 1px solid $border-color;
+	&:after {
+		content: "";
+		z-index: 10;
+		display: block;
+		position: absolute;
+			top: 50%;
+			left: 50%;
+		width: 1.5em;
+		height: 2.5em;
+		margin-left: -0.75em;
+		margin-top: -1.25em;
+		background-image: url('../img/ps-logo.png');
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		@include background-sizeNN(contain);
+		@include opacity(0.06);
+		}// :after
+	}// .img-undefined
+
 // Avatars
 .ps-avatar {
 	display: inline-block;

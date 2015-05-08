@@ -92,25 +92,6 @@
 			}// :hover
 		}// .disabled
 
-	&.text {
-		color: $PS_Olive;
-		text-transform: initial;
-		border: 0;
-		background-color: transparent;
-		.label {
-			display: inline-block;
-			padding-bottom: 2px;
-			border-bottom: 1px solid transparent;
-			@include transition(border,100,linear);
-			}// .label
-
-		&:hover {
-			.label {
-				border-bottom: 1px solid $PS_Olive;
-				}
-			}// :hover
-		}// .text
-
 	&.full-width {
 		width: 100%;
 		}// .full-width
@@ -123,4 +104,36 @@
 	&.all-caps {
 		text-transform: uppercase;
 		}// .all-caps
+
+	&.text {
+		padding: 0.5em 0.25em;
+		color: $PS_Olive;
+		text-transform: initial;
+		border: 0;
+		background-color: transparent;
+
+		&.small {
+			text-decoration: underline;
+			&:hover {
+				@include no-box-shadow;
+				}// :hover
+			}// .small
+
+		&:hover {
+			.label {
+				border-bottom: 1px solid $PS_Olive;
+				}
+			}// :hover
+
+		.label {
+			display: inline-block;
+			padding-bottom: 2px;
+			border-bottom: 1px solid transparent;
+			@include transition(border,100,linear);
+			}// .label
+
+		&.error {
+			color: $PS_error_red;
+			}// .error
+		}// .text
 	}// .button

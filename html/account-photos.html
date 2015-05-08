@@ -78,7 +78,7 @@
 		</header><!--ps-topbar-->
 
 	
-<div id="ps-page-content" class="ps-page-type-list row">
+<div id="ps-page-content" class="ps-page-type-menu no-topbar row">
 
 <div class="row-lining">
 	<!--PS Page Menu-->
@@ -118,17 +118,14 @@
 						<input type="hidden" name="csrfmiddlewaretoken" value="FwgeOKKiAiom4gpyI6eWpneILF9gi5wS">
 						<label class="row-label pull-left">Brand Photo</label>
 						<div class="large ps-avatar img-undefined column">
-														
-								<img src="../img/PS_Branding_PS_logo_120px.png">
-								
 						</div>
 						<div class="half column">
-							<div class="input-help-text">Used as your avatar in search results. Suggested dimensions are 100px X 100px</div>
+							<div class="input-help-text">Used as your avatar in search results. Suggested dimensions are 100px × 100px</div>
 							<br>
 							<div class="button-group">
-								 <input type="file" name="image" accept="image/*">
-								<button class="small button" type="submit" value="hmm">Upload Photo</button>
-								<button class="small button" type="submit" name="delete_image">Delete Photo</button>
+								<input type="file" name="image" accept="image/*">
+								<br><br>
+								<button class="small error text button" type="submit" name="delete_image">Delete Photo</button>
 							</div><!--button-group-->
 						</div>
 					</form>
@@ -145,12 +142,12 @@
 						<div class="row">
 							<label class="row-label pull-left"></label>
 							<div class="half column">
-								<div class="input-help-text">Header image on your public profile page. Suggested dimensions are 675px X 225px</div>
+								<div class="input-help-text">Header image on your public profile page. Suggested dimensions are 675px × 225px</div>
 								<br>
 								<div class="button-group">
-									 <input type="file" name="image_header" accept="image/*">
-									<button class="small button" type="submit">Upload Photo</button>
-									<button class="small button" type="submit" name="delete_image_header">Delete Photo</button>
+									<input type="file" name="image_header" accept="image/*">
+									<br><br>
+									<button class="small error text button" type="submit" name="delete_image_header">Delete Photo</button>
 
 								</div><!--button-group-->
 							</div>

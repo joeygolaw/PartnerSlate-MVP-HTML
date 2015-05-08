@@ -2,6 +2,7 @@
 form {
 	font-size: 1em;
 	@include input-font;
+	}// <form>
 
 	.input-row {
 		text-align: left;
@@ -10,7 +11,6 @@ form {
 	.form-actions {
 		margin-top: ($padding-base * 3);
 		}// .input-row
-	}// <form>
 
 
 // Input Base Styles

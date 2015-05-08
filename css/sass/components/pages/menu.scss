@@ -2,6 +2,11 @@
 .ps-page-type-menu {
 	margin-top: $ps-topbar-height;
 	padding-top: (($ps-page-topbar-height + 1px) + ($padding-base * 2));
+
+	&.no-topbar {
+		margin-top: 80px;
+		padding-top: 0;
+		}// .no-topbar
 	
 	#ps-page-topbar {
 		margin-bottom: ($padding-base *2);
