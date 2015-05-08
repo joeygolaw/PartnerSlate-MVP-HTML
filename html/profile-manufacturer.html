@@ -32,6 +32,41 @@
 	
 </head>
 <body>
+<div class="ps-page-overlay">
+	<div class="ps-panel ps-popover">
+		<div class="ps-panel-section">
+			<h3>Send Inquiry</h3>
+			<p>
+				To: Aaron Thomas
+				<br>
+				Re: Manufacturing
+			</p>
+
+			<hr>
+
+			<form action="./profile-inquire_files/profile-inquire.html" method="POST">
+				<div class="input-row">
+					<input type="text" placeholder="Product Type" value="" name="product_type" id="id_product_type">
+				</div><!--input-row-->
+				<div class="input-row">
+					<input type="text" placeholder="Annual Volume" value="" name="volume" id="id_volume">
+				</div><!--input-row-->
+				<div class="input-row">
+					<input type="email" placeholder="Number of SKUs" value="" name="skus" id="id_skus">
+				</div><!--input-row-->
+				<div class="input-row">
+					<textarea placeholder="Notes" rows="7" name="notes" id="id_notes"></textarea>
+				</div>
+
+				<div class="input-row">
+					<input type="submit" name="submit" value="Submit" class="fill full-width button" onclick="hideOverlay(); return false;">
+				</div><!--input-row-->
+			</form>
+		</div><!--ps-panel-section-->
+	</div>
+
+	<div class="page-dimmer"></div>
+</div><!--ps-page-overlay-->
 	
 	
 	<div id="ps-page" class="row">
@@ -120,12 +155,7 @@
 		<!--PS Page Sidebar-->
 		<div id="ps-page-sidebar" class="column">
 			<div class="ps-profile-actions">
-				
-				
-				<p><a href="#" class="fill button">Send Inquiry</a></p>
-				
-				<p><a href="#" class="minor fill button">Back to Search Results</a></p>
-
+				<a href="#" class="fill button" id="ps-send-inquiry">Send Inquiry</a>
 			</div>
 
 			

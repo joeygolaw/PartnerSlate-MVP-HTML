@@ -35,7 +35,31 @@ $(".fa.fa-star").click(function(){
 /*Anchor Smooth-Scroll*/
 $(function(){$("a[href*=#]:not([href=#])").click(function(){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var target=$(this.hash);target=target.length?target:$("[name="+this.hash.slice(1)+"]");if(target.length){$("html,body").animate({scrollTop:target.offset().top},480);return false;}}});});
 
-/* Page Overlay, close when clicked outside */
-$(".page-dimmer").click(function() {
-	$(this).parent().remove();
+
+/* Page Overlay */
+// Define Variables
+var $pageOverlay = $(".ps-page-overlay");
+var $popoverPanel = $(".ps-popover", $pageOverlay);
+var $inquireButton = $("#ps-send-inquiry");
+var $pageDimmer = $(".page-dimmer");
+
+// Center Popover Panel
+$($popoverPanel, $pageOverlay).css({
+	"margin-left" : -$popoverPanel.width()/2,
+	"margin-top" : -$popoverPanel.height()/2
 	});
+
+// Show Overlay
+function showOverlay() {
+	$('body').addClass("page-overlay");
+	$pageOverlay.css({"z-index": "1000"}).animate({opacity: 1.0});
+	$popoverPanel.animate({opacity: 1.0}, 100);
+	};
+$inquireButton.on('click', showOverlay);
+
+// Hide Overlay
+function hideOverlay() {
+	$('body').removeClass("page-overlay");
+	$pageOverlay.css({"z-index": "-1", "opacity": "0"});
+	};
+$pageDimmer.on('click', hideOverlay);

@@ -722,7 +722,9 @@ input[type="password"] {
 textarea {
   resize: none;
   min-height: 42px;
-  font-size: 0.875em; }
+  font-size: 0.875em;
+  padding-top: 1em;
+  padding-bottom: 1em; }
 
 .dropdown-field {
   position: relative;
@@ -1443,13 +1445,15 @@ body.page-overlay {
   overflow: hidden; }
 
 .ps-page-overlay {
-  z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  text-align: center; }
+  text-align: center;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: -1; }
   .ps-page-overlay .page-dimmer {
     position: absolute;
     top: 0;
@@ -1459,7 +1463,7 @@ body.page-overlay {
     background-color: rgba(43, 53, 57, 0.75); }
   .ps-page-overlay .ps-popover {
     position: absolute;
-    top: 25%;
+    top: 50%;
     left: 50%;
     width: 360px;
     margin-left: -180px;

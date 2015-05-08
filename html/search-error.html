@@ -83,7 +83,7 @@
 	<div id="ps-page-menu" class="column">
 	<div class="ps-panel">
 		<ul class="ps-panel-list menu-list">
-			<li>
+			<li class="current-checkmark">
 				<a href="#" class="list-item">Brands</a></li>
 			<li>
 				<a href="#" class="list-item">Suppliers</a></li>
@@ -92,16 +92,14 @@
 		</ul>
 	</div><!--ps-panel-->
 
-	<form action="http://partnerslate-mvp.elasticbeanstalk.com/search" method="GET">
-	<div class="left_nav_filter_first"><button class="small fill all-caps button" type="submit">Filter</button></div>
-	
+	<form id="ps-filter-form" action="http://partnerslate-mvp.elasticbeanstalk.com/search" method="GET">
 		<div class="ps-panel toggle-list">
 			<div class="ps-panel-title toggle">Geography</div>
 			<ul class="ps-panel-list search-filter-list hidden">
 					
 				<li>
 					<label class="list-item">
-						<input name="geography:5" type="checkbox">
+						<input name="geography:5" type="checkbox" checked="checked">
 						<span class="label">International</span>
 					</label>
 				</li>
@@ -972,16 +970,15 @@
 						<span class="label">Turnkey</span>
 					</label>
 				</li>
-
-		
 			</ul>
-		</div><!--ps-panel-->	
+		</div><!--ps-panel-->
 	
-	<div class="left_nav_filter_last"><button class="small fill all-caps button" type="submit">Filter</button></div>
+		<div class="ps-submit-form input-row">
+			<button class="small fill all-caps button" type="submit" onclick="return false;">Update Filters</button>
+		</div>
 	</form>
 
 </div><!--ps-page-menu-->
-
 
 	<!--PS Page Main-->
 	<div id="ps-page-main" class="column">
