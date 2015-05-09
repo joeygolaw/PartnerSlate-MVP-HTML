@@ -6,6 +6,7 @@
 	font-weight: 200;
 	line-height: 0.5em;
 	letter-spacing: -0.03em;
+	color: $PS_Slate;
 	@include header-font;
 	@include text-legibility();
 	}// .ps-logotype

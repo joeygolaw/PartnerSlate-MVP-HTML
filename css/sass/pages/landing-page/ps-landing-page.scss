@@ -21,7 +21,15 @@ body#ps-landing-page {
 
 	// Page Header
 	#ps-page-header {
+
+		.ps-logotype {
+			color: $white;
+			}// .ps-logotype
+
 		&.fixed {
+			.ps-logotype {
+				color: $PS_Slate;
+				}// .ps-logotype
 			ul.topbar-nav {
 				margin-top: -0.4em;
 				background-color: transparent;

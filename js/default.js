@@ -57,7 +57,7 @@ $(window).scroll(function() {
 	var topWindow = $(window).scrollTop();
 	var $pageHeader = $("#ps-page-header");
 
-	if ($(".slider-message").offset().top < topWindow) {
+	if (topWindow > 300) {
 		$pageHeader.addClass("fixed");
 		sticky = true;
 		}

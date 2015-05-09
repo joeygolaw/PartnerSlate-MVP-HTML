@@ -3,8 +3,9 @@
 ul.topbar-nav {
 	color: $PS_Slate;
 	font-size: 0.9375em;
+	white-space: nowrap;
 	@include input-font;
-	li {
+	& > li {
 		position: relative;
 		display: inline-block;
 		vertical-align: text-top;
@@ -22,6 +23,14 @@ ul.topbar-nav {
 				font-size: 1em;
 				}// .button
 			}// <a>
+
+		&.current {
+			a {
+				cursor: default;
+				color: $PS_Charcoal;
+				text-decoration: underline;
+				}// <a>
+			}// .current
 
 		// Nested Sub-Menus
 		.ps-popover {

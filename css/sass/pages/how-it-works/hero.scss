@@ -1,0 +1,44 @@
+// --------- HERO
+#ps-hero {
+	overflow: hidden;
+	height: 560px;
+	padding: 150px 2em 0 2em;
+	text-align: center;
+	@include box-sizing(border-box);
+
+	.panel-title {
+		padding: 0 2em;
+		}// .panel-title
+
+	.panel-about {
+		color: tint($PS_Slate, 25%);
+		}// .panel-about
+
+	.ps-hero-screenshot {
+		position: relative;
+		overflow: hidden;
+		height: 265px;
+
+		img {
+			width: 100%;
+				max-width: 700px;
+			margin: 0 auto;
+			border: 4px solid $border-color;
+			@include box-sizing(border-box);
+			@include round-all($radius-base * 2);
+			}// <img>
+
+		// Overlay simmer
+		&:after {
+			content: "";
+			z-index: 10;
+			display: block;
+			position: absolute;
+				top: 0;
+				left: 0;
+			width: 100%;
+			height: 100%;
+			@include gradient-tb(transparentize($white,1.0),66%,$white,95%);
+			}// :after
+		}// .ps-hero-screenshot
+	}// #ps-hero

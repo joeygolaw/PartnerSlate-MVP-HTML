@@ -1,0 +1,21 @@
+// --------- HOW IT WORKS
+#ps-how-it-works {
+	min-width: 400px;
+	background-color: $white;
+
+	#ps-page-content {
+		margin-bottom: 0;
+		}// #ps-page-content
+
+	.panel-title {
+		margin-bottom: ($padding-base * 2);
+		}// .panel-title
+
+	.panel-about {
+		max-width: 600px;
+		margin: 0 auto 3em auto;
+		padding: 0 2em;
+		line-height: 137.5%;
+		color: tint($PS_Slate, 50%);
+		}// .panel-about
+	}// #ps-how-it-works

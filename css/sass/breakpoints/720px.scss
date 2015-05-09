@@ -96,4 +96,84 @@
 				}// :last-of-type
 			}// .half.column
 		}// #ps-page-footer
+
+
+		// --------- HOW IT WORKS
+		#ps-how-it-works {
+			#ps-page-header {
+				&.fixed {
+					ul.topbar-nav {
+						display: none;
+						}// ul.topbar-nav
+					}// .fixed
+				}// #ps-page-header
+
+			ul.topbar-nav {
+				width: 100%;
+				font-size: 0.875em;
+				border-bottom: 6px double $border-color;
+
+				.ps-user-menu .ps-panel-list {
+					font-size: 1.1428571429em;
+					}
+				}// ul.topbar-nav
+			}// #ps-how-it-works
+
+
+		// --------- HERO
+		#ps-hero {
+			padding-top: 200px;
+			padding-left: 0;
+			padding-right: 0;
+			height: 610px;
+
+			.ps-hero-screenshot {
+				img {
+					position: relative;
+						left: 2em;
+					width: 700px;
+					}// <img>
+				}// .ps-hero-screenshot
+			}// #ps-hero
+
+
+		// --------- PRICING
+		#ps-pricing {
+
+			#pricing-brands {
+				&:after {
+					display: none;
+					}// :after
+				}// #pricing-brands
+
+			.half.column {
+				width: 100%;
+				&:last-of-type {
+					margin-top: 4em;
+					}
+
+				.ps-panel {
+					padding-top: 2em;
+					}// .ps-panel
+				}// .half.column
+
+			ul.pricing-about {
+				margin-bottom: 2em;
+				li {
+					padding: ($padding-base / 2) 0;
+					&:after {
+						margin-top: $padding-base;
+						}// :after
+					}// <li>
+				}// ul.pricing-about
+
+			.pricing-cost {
+				height: auto;
+				padding: 2em;
+				}// .pricing-cost
+
+			#ps-get-started {
+				margin-top: 4em;
+				}// #ps-get-started
+			}// #ps-pricing
 	}// 720 PX

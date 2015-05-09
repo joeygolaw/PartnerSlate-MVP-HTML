@@ -1,0 +1,107 @@
+// --------- PRICING
+#ps-pricing {
+	position: relative;
+	color: $white;
+	padding: 3em 0 5em 0;
+	background-color: $PS_Charcoal;
+
+	.panel-title {
+		z-index: 20;// push above #ps-hero-screenshot
+		position: absolute;
+			top: -2em;
+			left: 50%;
+		width: 18em;
+		margin-left: -9em;
+		font-size: 0.9375em;
+		font-weight: normal;
+		padding: 2em 4em 0.666666667em 4em;
+		text-transform: uppercase;
+		letter-spacing: 0.01em;
+		word-spacing: 0.15em;
+		background-color: $PS_Charcoal;
+		@include header-font;
+		@include round(top,left,0.6666666667em);
+		@include round(top,right,0.6666666667em);
+		@include box-sizing(border-box);
+		}// .panel-title
+
+	.half.column {
+		padding: 0 ($padding-base * 3.5);
+		.ps-panel {
+			padding-top: 2.5em;
+			border: 2px solid $PS_Slate;
+			background-color: transparent;
+			}// .ps-panel
+		}// .half.column
+
+	#pricing-brands {
+		// Handshake
+		&:after {
+			content: "";
+			z-index: 10;
+			display: block;
+			position: absolute;
+				top: 50%;
+				left: 100%;
+			width: 7.5em;
+			height: 7.5em;
+			margin: -3.5em 0 0 -3.75em;
+			background-repeat: no-repeat;
+			background-image: url('../img/ps-why-handshake-dark.png');
+			background-color: $PS_Charcoal;
+			@include background-size(7.5em,7.5em);
+			}// :after
+		}// #pricing-brands
+
+	.pricing-title {
+		margin-bottom: ($padding-base * 2);
+		color: $PS_Olive;
+		}// .pricing-title
+
+	ul.pricing-about {
+		margin-bottom: ($padding-base * 4);
+		padding: 0 3em;
+		font-size: 0.9375em;
+		line-height: 137.5%;
+		li {
+			padding: $padding-base 0;
+			&:after {
+				content: "";
+				display: block;
+				width: 75%;
+				height: 1px;
+				margin: ($padding-base * 1.5) auto 0 auto;
+				background-color: $PS_Slate;
+				}// :after
+			&:last-of-type {
+				&:after {
+					display: none;
+					}// :after
+				}// :last-of-type
+			}// <li>
+		}// ul.pricing-about
+
+	.pricing-cost {
+		height: 7em;
+		padding: ($padding-base * 3.5) 0;
+		background-color: tint($PS_Charcoal, 10%);
+		@include box-sizing(border-box);
+		@include round(bottom,left,$ps-panel-radius);
+
+		h3 {
+			color: $PS_Olive;
+			}// <h3>
+
+		p {
+			margin-top: $padding-base;
+			color: $PS_Olive;
+			}// <p>
+		}// .pricing-cost
+
+	#ps-get-started {
+		width: 280px;
+		margin-top: ($padding-base * 4);
+		padding-top: ($padding-base * 1.5);
+		padding-bottom: ($padding-base * 1.5);
+		}// #ps-get-started
+	}// #ps-pricing
