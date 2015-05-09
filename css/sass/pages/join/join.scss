@@ -1,0 +1,60 @@
+// -------- JOIN
+// "Start Your Search" panels
+.ps-start-search {
+	.column {
+		position: relative;
+		height: 8.75em;
+		background-color: $PS_Olive;
+		@include unselectable;
+		@include background-sizeNN(cover);
+		&.half {
+			width: 47%;
+			&:first-of-type {
+			margin-right: 6%;
+				}// :first-of-type
+			}// .half
+
+		&:hover {
+			@include text-shadow(0,2px,6px,transparentize($PS_Charcoal,0.75));
+			&:before {
+				background-color: transparentize($PS_Charcoal, 0.75);
+				}// :before
+			}// :hover
+
+		// Dimmer
+		&:before {
+			content: "";
+			display: inline-block;
+			position: absolute;
+				top: 0;
+				left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: transparentize($PS_Charcoal, 0.5);
+			@include transition-general;
+			}// :before
+
+		// Panel Types
+		&.manufacturers {
+			background-image: url("../img/demo-search-start-1.jpg");
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			}// .manufacturers
+		&.suppliers {
+			background-image: url("../img/demo-search-start-2.jpg");
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			}// .suppliers
+
+		h4 {
+			position: relative;
+			z-index: 10;
+			color: $white;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			line-height: 8.75em;
+			@include text-shadow(0,2px,2px,transparentize($PS_Charcoal,0.5));
+			@include transition-general;
+			}// <h4>
+		}// .column
+	}// .ps-start-search

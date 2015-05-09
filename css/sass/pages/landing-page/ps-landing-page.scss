@@ -1,5 +1,34 @@
 // -------------------- LANDING PAGE
 body#ps-landing-page {
+	min-width: 400px;
+	background-color: $white;
+
+	// User Menu (Logged In users only)
+	ul.topbar-nav {
+		margin-top: 0.25em;
+		padding: 0 0.75em 0 1.25em;
+		background-color: $white;
+		@include round(top,right,0.9375em);
+		@include round(bottom,left,0.9375em);
+		@include box-shadow(0,0,1.5em,0,0.25);
+
+		.ps-user-menu {
+			& > a {
+				padding: ($padding-base * 1.5) $padding-base;
+				}
+			}// .ps-user-menu
+		}// ul.topbar-nav
+
+	// Page Header
+	#ps-page-header {
+		&.fixed {
+			ul.topbar-nav {
+				margin-top: -0.4em;
+				background-color: transparent;
+				@include no-box-shadow;
+				}// ul.topbar-nav
+			}// .fixed
+		}// #ps-page-header
 
 	// ---------- HEADER
 	#ps-topbar {

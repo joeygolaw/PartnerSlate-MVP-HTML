@@ -12,7 +12,6 @@
 	.row-lining {
 		width: 100%;
 		max-width: $page-width;
-		min-width: $page-width;
 		margin: 0 auto;
 		@include box-sizing(border-box);
 		&:after {

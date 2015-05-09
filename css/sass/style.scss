@@ -16,12 +16,11 @@
 //		- CHANGED: .ps-user-menu to display when clicked instead of hovered
 //		- ADDED: input[type="checkbox"] styling
 //		- CHANGED: de-specified .ps-panel-list sub styles, broader styles added
+//		- CHANGED: re-arranged page-types/ scss directory logically, removed sections/ scss directory
 // 0.3: Third Build
 //		- 
 
 // ***** FUTURE UPDATES *****
-// - consolidate styles w/ those on current partnerslate.com Landing Page, mainly headers and type
-// - add functionality to hide .ps-user-menu when it is displayed and the user clicks outside the menu
 
 
 
@@ -42,6 +41,7 @@
 @import "components/forms";
 @import "components/labels";
 @import "components/topbars";
+@import "components/header";
 @import "components/nav";
 @import "components/icons";
 @import "components/images";
@@ -51,21 +51,23 @@
 @import "components/tables";
 
 /* -------- PAGE TYPES */
-@import "components/pages/menu";
-@import "components/pages/list";
-@import "components/pages/profile";
-@import "components/pages/single";
+@import "components/page-types/menu";
+@import "components/page-types/list";
+@import "components/page-types/profile";
+@import "components/page-types/single";
 
 /* -------- PAGES */
 /* Landing Page */
-@import "components/unslider.js";
-@import "components/mailchimp";
+@import "pages/landing-page/unslider.js";
+@import "pages/landing-page/mailchimp";
 /* Landing Page, Sections */
-@import "sections/ps-who";
-@import "sections/ps-how";
-@import "sections/ps-why";
-@import "sections/ps-signup";
-@import "sections/ps-landing-page";
+@import "pages/landing-page/ps-who";
+@import "pages/landing-page/ps-how";
+@import "pages/landing-page/ps-why";
+@import "pages/landing-page/ps-signup";
+@import "pages/landing-page/ps-landing-page";
+/* Join Process */
+@import "pages/join/join.scss";
 
 /* -------- BREAKPOINTS */
 @import "breakpoints/1200px";

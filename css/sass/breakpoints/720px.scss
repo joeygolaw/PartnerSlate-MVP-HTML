@@ -75,4 +75,25 @@
 	.slider-message {
 		padding-top: 2.5em;
 		}// .slider-message
+
+	#ps-page-footer {
+		.ps-logotype {
+			display: none;
+			}// .ps-logotype
+		ul {
+			margin: 0 ($padding-base * 3);
+			li {
+				line-height: 175%;
+				}// <li>
+			}// <ul>
+		.half.column {
+			width: 100%;
+			text-align: center;
+			&:last-of-type {
+				margin-top: 1em;
+				padding-top: 1em;
+				border-top: 1px solid $border-color;
+				}// :last-of-type
+			}// .half.column
+		}// #ps-page-footer
 	}// 720 PX

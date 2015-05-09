@@ -1,4 +1,8 @@
 // ---------- UNSLIDER
+#ps-slider {
+	@include opacity(0);// fade in using jQuery
+	}// #ps-slider
+
 .ps-slider-banner {
 	position: relative;
 	overflow: auto;
@@ -9,6 +13,7 @@
 			position: relative;
 			float: left;
 			height: inherit;
+			width: 100%;
 			&.active {
 				.slider-message {
 					@include opacity(1);

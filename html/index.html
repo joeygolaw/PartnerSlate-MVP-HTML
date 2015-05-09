@@ -31,84 +31,107 @@
 
 	
 </head>
-<body>
-	
-	
-	<div id="ps-page" class="row">
-		<header id="ps-topbar" class="row fixed" role="navigation">
-			<div class="row-lining">
-				<a href="#" class="ps-lockup pull-left">
-					<i class="ps-logo"></i>
-					<span class="ps-logotype">PartnerSlate</span>
-				</a><!--ps-lockup-->
-				
+<body id="ps-landing-page">
+<div class="ps-page-overlay">
+	<div class="ps-panel ps-popover" style="width:600px;">
+		<div class="ps-panel-section">
+			<h3>Start Your Search</h3>
+			<p>Whether it’s fresh, organic produce or a certified, reliable manufacturer, PartnerSlate can help you find the right food industry partners.</p>
 
-				
-				<ul class="topbar-nav pull-right" role="menubar">
-					<li class="ps-user-menu">
-						<a href="#">Matt's Energy Drink </a>
-						<div class="ps-popover ps-panel" role="presentation">
-							<ul class="ps-panel-list menu-list" role="menu">
-	<li role="presentation">
-		<a href="#" class="list-item" role="menuitem">
-			Matt's Energy Drink 
-			<br>
-			<span class="subtitle">View public profile</span>
-		</a>
-	</li>
-	<li role="presentation"><a href="#" class="list-item" role="menuitem">Start Searching</a></li>
-	<li role="presentation"><a href="#" class="list-item" role="menuitem">Your Account</a></li>
-	<li role="presentation"><a href="#" class="list-item" role="menuitem">Sign Out</a></li>
-</ul>
-							<div class="ps-panel-arrows" role="presentation">
-								<span class="inner arrow"></span>
-							</div>
+			<br><br>
+
+			<div class="ps-start-search row">
+				<a href="#" class="manufacturers half column">
+					<h4>Manufacturers</h4>
+					<div class="dimmer"></div>
+				</a><!--manufacturers-->
+				<a href="#" class="suppliers half column">
+					<h4>Suppliers</h4>
+				</a><!--suppliers-->
+			</div><!--ps-start-search-->
+		</div><!--ps-panel-section-->
+
+		<div class="ps-panel-section">
+			<div class="row">
+				<span class="input-help-text"><a href="#">View Your Account</a> ></a>
+			</div><!--row-->
+		</div><!--ps-panel-section-->
+	</div>
+
+	<div class="page-dimmer"></div>
+</div><!--ps-page-overlay-->
+
+
+	<div id="ps-page" class="row">
+		<header id="ps-page-header" class="row" role="navigation">
+			<a href="#" class="ps-lockup pull-left">
+				<i class="ps-logo"></i>
+				<span class="ps-logotype">PartnerSlate</span>
+			</a><!--ps-lockup-->
+
+			<ul class="topbar-nav pull-right" role="menubar">
+				<li class="ps-user-menu">
+					<a href="#"><span class="label">Matt's Energy Drink</span> </a>
+					<div class="ps-popover ps-panel" role="presentation">
+						<ul class="ps-panel-list menu-list" role="menu">
+							<li role="presentation">
+								<a href="#" class="list-item" role="menuitem">
+									Matt's Energy Drink 
+									<br>
+									<span class="subtitle">View public profile</span>
+								</a>
+							</li>
+							<li role="presentation"><a href="#" class="list-item" role="menuitem">Start Searching</a></li>
+							<li role="presentation"><a href="#" class="list-item" role="menuitem">Your Account</a></li>
+							<li role="presentation"><a href="#" class="list-item" role="menuitem">Sign Out</a></li>
+						</ul>
+						<div class="ps-panel-arrows" role="presentation">
+							<span class="inner arrow"></span>
 						</div>
-					</li>
-				</ul><!--topbar-nav-->
-				
-			</div><!--row-lining-->
+					</div><!--ps-popover-->
+				</li><!--ps-user-menu-->
+			</ul><!--topbar-nav-->
 		</header><!--ps-topbar-->
 
 	
-<div id="ps-page-content" class="ps-page-type-list row">
+<div id="ps-page-content" class="row">
 	<!--Who-->
 	<div id="ps-panel-who" class="row">
 		<div id="ps-slider" class="ps-slider-banner has-dots" style="overflow: hidden; width: 100%; height: 560px;">
 			<ul style="width: 300%; position: relative; left: 0%; height: 560px;">
-				<li id="ps-slider-brand" class="active" style="width: 33.3333333333333%;">
+				<li id="ps-slider-brand" class="active">
 					<div class="row">
 						<div class="slider-message column">
 							<div class="message-title"><h1>What are you cooking up?</h1></div>
 							<div class="message-about"><p>Make the right strategic partnerships that will help you build your next food product.</p></div>
-							<a href="#" class="fill button">Start Searching</a>
+							<a href="#" class="primary fill button" onclick="showOverlay(); return false;">Start Searching</a>
 						</div><!--slider-message-->
 						<div class="slider-product column"><img src="../img/brand-2.jpg"></div>
 						<div class="slider-producer column"><img src="../img/brand-1.jpg"></div>
 					</div><!--row-->
 				</li><!--ps-slider-brand-->
 
-				<li id="ps-slider-supplier" style="width: 33.3333333333333%;" class="">
+				<li id="ps-slider-supplier">
 					<div class="slider-message column">
 						<div class="message-title"><h1>Looking for quality ingredients?</h1></div>
 						<div class="message-about"><p>Make the right strategic partnerships that will help you build your next food product.</p></div>
-							<a href="#" class="fill button">Start Searching</a>
+							<a href="#" class="primary fill button" onclick="showOverlay(); return false;">Start Searching</a>
 					</div><!--slider-message-->
 					<div class="slider-product"><img src="../img/supplier-2.jpg"></div>
 					<div class="slider-producer"><img src="../img/supplier-1.jpg"></div>
 				</li><!--ps-slider-supplier-->
 
-				<li id="ps-slider-manufacturer" style="width: 33.3333333333333%;" class="">
+				<li id="ps-slider-manufacturer">
 					<div class="slider-message column">
 						<div class="message-title"><h1><span>Find world-class contract manufacturers.</span></h1></div>
 						<div class="message-about"><p>Make the right strategic partnerships that will help you build your next food product.</p></div>
-							<a href="#" class="fill button">Start Searching</a>
+							<a href="#" class="primary fill button" onclick="showOverlay(); return false;">Start Searching</a>
 					</div><!--slider-message-->
 					<div class="slider-product"><img src="../img/manufacturer-2.jpg"></div>
 					<div class="slider-producer"><img src="../img/manufacturer-1.jpg"></div>
 				</li><!--ps-slider-manufacturer-->
 			</ul>
-		<ol class="dots"><li class="dot active">1</li><li class="dot">2</li><li class="dot">3</li></ol></div><!--ps-slider-->
+		</div><!--ps-slider-->
 	</div><!--ps-panel-who-->
 
 	<!--How-->
@@ -200,22 +223,35 @@
 		</div><!--row-lining-->
 	</footer><!--ps-page-footer-->
 	</div> <!-- ps-page -->
-
-	<script type="text/javascript" src="../js/default.js"></script>
 	
 <script type="text/javascript" src="../js/unslider.min.js"></script>
-<script type="text/javascript">
-	/*PS Slider Banner*/ var banner = $('.ps-slider-banner');var slider = banner.unslider({speed: 600,delay: 4000,complete: function(el) {var index = el.find('.dot.active').index();var active = banner.find('ul li:eq(' + index + ')');active.addClass('active').siblings().removeClass('active');},keys:true,dots:true,fluid:true});
-	/*Sticky Nav*/ $(window).scroll(function(){var offset = 0;var sticky = false;var topWindow = $(window).scrollTop();if ($(".slider-message").offset().top < topWindow) {$("#ps-page-header").addClass("fixed");sticky = true;} else {$("#ps-page-header").removeClass("fixed");}});
-	/*Anchor Smooth-Scroll*/ $(function(){$("a[href*=#]:not([href=#])").click(function(){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var target=$(this.hash);target=target.length?target:$("[name="+this.hash.slice(1)+"]");if(target.length){$("html,body").animate({scrollTop:target.offset().top},480);return false;}}});});
-</script>
 <script type="text/javascript" src="../js/default.js"></script>
 <script type="text/javascript">
-  /* Page Overlay, center popovers */
-  $(".ps-page-overlay .ps-popover").css({
-    "margin-left" : -$(".ps-page-overlay .ps-popover").width()/2,
-    "margin-top" : -$(".ps-page-overlay .ps-popover").height()/2
-    });
+	// Fade in PS Slider Banner
+	var $sliderBanner = $('#ps-slider');
+	$(document).ready(function() {
+		$sliderBanner.animate({"opacity": "1"});
+		});
+	// PS Slider Banner
+	var banner = $('.ps-slider-banner');
+	var slider = banner.unslider({
+					speed: 600,
+					delay: 4000,
+					complete: function(el) {
+									var index = el.find('.dot.active').index();
+									var active = banner.find('ul li:eq(' + index + ')');
+									active.addClass('active').siblings().removeClass('active');
+									},
+					keys: true,
+					dots: true,
+					fluid: true
+					});
+	// Replace User Menu label
+	var $userMenu = $('.ps-user-menu');
+	var $windowWidth = $(window).width();
+	if($windowWidth < 520) {
+		$('.label', $userMenu).html('Menu');
+		};
 </script>
 </body>
 </html>

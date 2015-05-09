@@ -1,0 +1,72 @@
+// ---------- HEADER
+#ps-page-header {
+	z-index: 100;
+	position: absolute;
+		top: 0;
+		left: 0;
+	height: $header-height;
+	width: 100%;
+	padding: 1.75em 4.5%;
+	background-color: transparentize($white,1);
+	border-bottom: 1px solid transparent;
+	@include unselectable;
+	@include box-sizing(border-box);
+	@include transition(background,100,linear);
+
+	.ps-lockup {
+		width: auto;
+		}// .ps-lockup
+
+		.ps-logo {
+			margin-right: 0.25em;
+			}// .ps-logo
+
+		.ps-logotype {
+			color: $white;
+			font-size: 2em;
+			line-height: 150%;
+			}// .ps-logotype
+
+	.button.outline {
+		position: relative;
+			top: 0.75em;
+			right: 42.5%;
+		color: $white;
+		border-color: $white;
+		background-color: transparent;
+		&:hover {
+			color: $PS_Olive;
+			border-color: $PS_Olive;
+			}// :hover
+		}// .button.outline
+
+	&.fixed {
+		position: fixed;
+		height: 60px;
+		max-height: 60px;
+		padding: 0.75em 4.5% 0 4.5%;
+		background-color: $white;
+		border-bottom: 1px solid tint($PS_Slate,80%);
+		@include box-shadow(0,4px,0,0,0.02);
+		.ps-logo {
+			width: 1.25em;
+			}// .ps-logo
+		.ps-logotype {
+			color: $PS_Slate;
+			font-size: 1.5em;
+			line-height: 133%;
+			}// .ps-logotype
+		.button.outline {
+			position: relative;
+				top: 0;
+				right: 0;
+			color: $PS_Olive;
+			border-color: $PS_Olive;
+			background-color: transparent;
+			&:hover {
+				color: $PS_Charcoal;
+				border-color: $PS_Charcoal;
+				}// :hover
+			}// .button.outline
+		}// .fixed
+	}// #ps-page-header

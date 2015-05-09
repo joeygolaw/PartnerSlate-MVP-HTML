@@ -96,6 +96,10 @@
 		width: 100%;
 		}// .full-width
 
+	&.primary {
+		font-size: 1.25em;
+		}// .primary
+
 	&.small {
 		padding: 0.6em 1em;
 		font-size: 0.8125em;
@@ -120,6 +124,7 @@
 			}// .small
 
 		&:hover {
+			@include no-box-shadow;
 			.label {
 				border-bottom: 1px solid $PS_Olive;
 				}

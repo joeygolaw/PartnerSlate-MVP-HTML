@@ -12,8 +12,11 @@
 		}// .ps-lockup
 
 	.button {
-		padding: 0.8125em 1.5em;
 		font-size: 0.9375em;
+
+		&.primary {
+			font-size: 1em;
+			}// .primary
 		}// .button
 
 	#ps-topbar {
@@ -86,4 +89,34 @@
 			font-size: 0.875em;
 			}// <p>
 		}// .slider-message
+
+
+	// -------------------- LANDING PAGE
+	body#ps-landing-page {
+
+		// User Menu (Logged In users only)
+		ul.topbar-nav {
+			margin-top: 0.5em;
+			padding: 0 0.25em 0 0.75em;
+			font-size: 0.875em;
+			.ps-user-menu {
+				& > a {
+					padding: $padding-base;
+					.label {
+						}// .label
+					}// <a>
+				}// .ps-user-menu
+			}// ul.topbar-nav
+
+		// Page Header
+		#ps-page-header {
+			&.fixed {
+				ul.topbar-nav {
+					margin-top: 0;
+					background-color: transparent;
+					@include no-box-shadow;
+					}// ul.topbar-nav
+				}// .fixed
+			}// #ps-page-header
+		}// body#ps-landing-page
 	}// 640 PX
