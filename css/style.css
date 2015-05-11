@@ -2650,6 +2650,7 @@ body#ps-landing-page {
     padding-bottom: 15px; }
 
 #ps-how-it-works {
+  margin-top: 0;
   min-width: 400px;
   background-color: #FFF; }
   #ps-how-it-works #ps-page-content {
