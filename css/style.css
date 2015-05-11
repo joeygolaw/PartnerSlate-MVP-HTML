@@ -2022,6 +2022,9 @@ body.page-overlay {
     font-size: 0.875em;
     line-height: 250%; }
 
+body.user-logged-in {
+  margin-top: 60px; }
+
 /* -------- PAGES */
 /* Landing Page */
 #ps-slider {

@@ -21,6 +21,7 @@ var $pageOverlay = $(".ps-page-overlay");
 var $popoverPanel = $(".ps-popover", $pageOverlay);
 var $inquireButton = $("#ps-send-inquiry");
 var $pageDimmer = $(".page-dimmer");
+var $pageHeader = $("#ps-page-header");
 
 // Center Popover Panel
 $($popoverPanel, $pageOverlay).css({
@@ -51,20 +52,24 @@ $(".ps-user-menu").click(function(){
 	return false;
 	});
 // Sticky Nav
-$(window).scroll(function() {
-	var offset = 0;
-	var sticky = false;
-	var topWindow = $(window).scrollTop();
-	var $pageHeader = $("#ps-page-header");
+// IF user is logged in, do nothing
+if($('body').hasClass('user-logged-in')) {}
+// ELSE toggle fixed class on scroll
+else {
+	$(window).scroll(function() {
+		var offset = 0;
+		var sticky = false;
+		var topWindow = $(window).scrollTop();
 
-	if (topWindow > 300) {
-		$pageHeader.addClass("fixed");
-		sticky = true;
-		}
-	else {
-		$pageHeader.removeClass("fixed");
-		}
+		if (topWindow > 300) {
+			$pageHeader.addClass("fixed");
+			sticky = true;
+			}
+		else {
+			$pageHeader.removeClass("fixed");
+			}
 		});
+	};
 
 
 // ---------- Miscellaneous
