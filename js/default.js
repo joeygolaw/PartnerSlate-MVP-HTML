@@ -47,8 +47,8 @@ $pageDimmer.on('click', hideOverlay);
 
 // ---------- Page Topbar
 // User Menu
-$(".ps-user-menu").click(function(){ 
-	$(this).toggleClass("toggled");
+$(".ps-user-menu > a").click(function(){ 
+	$(this).parent().toggleClass("toggled");
 	return false;
 	});
 // Sticky Nav
