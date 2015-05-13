@@ -32,7 +32,7 @@
 	
 </head>
 <body class="user-logged-in">
-<div class="ps-page-overlay">
+<div id="ps-send-inquiry" class="ps-page-overlay">
 	<div class="ps-panel ps-popover">
 		<div class="ps-panel-section">
 			<h3>Send Inquiry</h3>
@@ -155,7 +155,7 @@
 		<!--PS Page Sidebar-->
 		<div id="ps-page-sidebar" class="column">
 			<div class="ps-profile-actions">
-				<a href="#" class="fill button" id="ps-send-inquiry">Send Inquiry</a>
+				<a href="#" class="fill button" id="ps-send-inquiry" onclick="showOverlay($('#ps-send-inquiry')); return false;">Send Inquiry</a>
 			</div>
 
 			

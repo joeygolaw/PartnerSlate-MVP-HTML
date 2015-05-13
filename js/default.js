@@ -18,24 +18,25 @@ $(".clear-all-closable").click(function() {
 // ---------- Page Overlay
 // Define Variables
 var $pageOverlay = $(".ps-page-overlay");
-var $popoverPanel = $(".ps-popover", $pageOverlay);
+var $popoverPanel = $(".ps-popover");
 var $inquireButton = $("#ps-send-inquiry");
 var $pageDimmer = $(".page-dimmer");
 var $pageHeader = $("#ps-page-header");
 
 // Center Popover Panel
-$($popoverPanel, $pageOverlay).css({
-	"margin-left" : -$popoverPanel.width()/2,
-	"margin-top" : -$popoverPanel.height()/2
+$($pageOverlay).each(function() {
+	$(this).find($popoverPanel).css({
+		"margin-left" : -$(this).find($popoverPanel).width()/2,
+		"margin-top" : -$(this).find($popoverPanel).height()/2
+		});
 	});
 
 // Show Overlay
-function showOverlay() {
+function showOverlay(panelID) {
 	$('body').addClass("page-overlay");
-	$pageOverlay.css({"z-index": "1000"}).animate({opacity: 1.0});
-	$popoverPanel.animate({opacity: 1.0}, 100);
+	$(panelID).css({"z-index": "9999"}).animate({opacity: 1.0});
+	$(panelID).animate({opacity: 1.0}, 100);
 	};
-$inquireButton.on('click', showOverlay);
 
 // Hide Overlay
 function hideOverlay() {
@@ -52,24 +53,25 @@ $(".ps-user-menu > a").click(function(){
 	return false;
 	});
 // Sticky Nav
-// IF user is logged in, do nothing
-if($('body').hasClass('user-logged-in')) {}
-// ELSE toggle fixed class on scroll
-else {
-	$(window).scroll(function() {
-		var offset = 0;
-		var sticky = false;
-		var topWindow = $(window).scrollTop();
-
-		if (topWindow > 300) {
-			$pageHeader.addClass("fixed");
-			sticky = true;
-			}
-		else {
-			$pageHeader.removeClass("fixed");
-			}
-		});
-	};
+// JG**** Commented out 20150513 - Header now always has fixed class
+// // IF user is logged in, do nothing
+// if($('body').hasClass('user-logged-in')) {}
+// // ELSE toggle fixed class on scroll
+// else {
+// 	$(window).scroll(function() {
+// 		var offset = 0;
+// 		var sticky = false;
+// 		var topWindow = $(window).scrollTop();
+//
+// 		if (topWindow > 300) {
+// 			$pageHeader.addClass("fixed");
+// 			sticky = true;
+// 			}
+// 		else {
+// 			$pageHeader.removeClass("fixed");
+// 			}
+// 		});
+// 	};
 
 
 // ---------- Miscellaneous

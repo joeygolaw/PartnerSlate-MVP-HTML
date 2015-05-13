@@ -67,12 +67,14 @@
 @import "pages/landing-page/ps-why";
 @import "pages/landing-page/ps-signup";
 @import "pages/landing-page/ps-landing-page";
-/* Join Process */
-@import "pages/join/join.scss";
 /* How It Works */
 @import "pages/how-it-works/hero.scss";
 @import "pages/how-it-works/pricing.scss";
 @import "pages/how-it-works/how-it-works.scss";
+
+/* -------- PANELS */
+@import "panels/join";
+@import "panels/start-search";
 
 /* -------- BREAKPOINTS */
 @import "breakpoints/1200px";

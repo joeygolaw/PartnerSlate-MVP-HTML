@@ -1,6 +1,7 @@
 // -------------------- LANDING PAGE
 body#ps-landing-page {
 	min-width: 400px;
+	margin-top: 60px;// same as .fixed header height
 	background-color: $white;
 
 	// User Menu (Logged In users only)

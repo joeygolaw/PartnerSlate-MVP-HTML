@@ -14,11 +14,11 @@ ul.topbar-nav {
 		a {
 			display: inline-block;
 			height: inherit;
-			padding: ($padding-base * 2) $padding-base;
+			padding: ($padding-base * 1.5) $padding-base;
 			@include box-sizing(border-box);
 			&.button {
 				height: auto;
-				margin-top: $padding-base;
+				margin-top: ($padding-base / 2);
 				margin-left: $padding-base;
 				font-size: 1em;
 				}// .button

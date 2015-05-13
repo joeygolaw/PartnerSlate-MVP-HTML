@@ -6,6 +6,7 @@
 		left: 0;
 	height: $header-height;
 	width: 100%;
+		min-width: 400px;
 	padding: 1.75em 4.5%;
 	background-color: transparentize($white,1);
 	border-bottom: 1px solid transparent;
@@ -60,7 +61,7 @@
 			height: 100%;
 			li {
 				a {
-					padding: $padding-base;
+
 					}// <a>
 				}// <li>
 			}// ul.topbar-nav

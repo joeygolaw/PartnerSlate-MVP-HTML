@@ -47,6 +47,7 @@
 
 	// Reduce padding on nested menus
 	ul.topbar-nav {
+		margin-top: 0.5em;
 		margin-right: $padding-base * 3;
 		li ul {
 			li {

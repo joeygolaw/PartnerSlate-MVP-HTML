@@ -1011,6 +1011,7 @@ input[type="radio"] {
     margin-top: 15px;
     margin-left: 30px; }
   #ps-topbar ul.topbar-nav {
+    margin-top: 0.5em;
     margin-right: 30px; }
     #ps-topbar ul.topbar-nav li ul li .list-item {
       padding: 12px 10px; }
@@ -1063,6 +1064,7 @@ input[type="radio"] {
   left: 0;
   height: 100px;
   width: 100%;
+  min-width: 400px;
   padding: 1.75em 4.5%;
   background-color: rgba(255, 255, 255, 0);
   border-bottom: 1px solid transparent;
@@ -1115,8 +1117,6 @@ input[type="radio"] {
       line-height: 133%; }
     #ps-page-header.fixed ul.topbar-nav {
       height: 100%; }
-      #ps-page-header.fixed ul.topbar-nav li a {
-        padding: 10px; }
     #ps-page-header.fixed .button.outline {
       position: relative;
       top: 0;
@@ -1146,14 +1146,14 @@ ul.topbar-nav {
     ul.topbar-nav > li a {
       display: inline-block;
       height: inherit;
-      padding: 20px 10px;
+      padding: 15px 10px;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       -ms-box-sizing: border-box;
       box-sizing: border-box; }
       ul.topbar-nav > li a.button {
         height: auto;
-        margin-top: 10px;
+        margin-top: 5px;
         margin-left: 10px;
         font-size: 1em; }
     ul.topbar-nav > li.current a {
@@ -2373,6 +2373,7 @@ div#mc_embed_signup {
 
 body#ps-landing-page {
   min-width: 400px;
+  margin-top: 60px;
   background-color: #FFF; }
   body#ps-landing-page ul.topbar-nav {
     margin-top: 0.25em;
@@ -2452,62 +2453,6 @@ body#ps-landing-page {
         body#ps-landing-page #ps-topbar.fixed .button.outline:hover {
           color: #2B3539;
           border-color: #2B3539; }
-
-/* Join Process */
-.ps-start-search .column {
-  position: relative;
-  height: 8.75em;
-  background-color: #0C9;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .ps-start-search .column.half {
-    width: 47%; }
-    .ps-start-search .column.half:first-of-type {
-      margin-right: 6%; }
-  .ps-start-search .column:hover {
-    text-shadow: 0 2px 6px rgba(43, 53, 57, 0.25); }
-    .ps-start-search .column:hover:before {
-      background-color: rgba(43, 53, 57, 0.25); }
-  .ps-start-search .column:before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(43, 53, 57, 0.5);
-    -webkit-transition: all 100ms ease-in-out;
-    -moz-transition: all 100ms ease-in-out;
-    -o-transition: all 100ms ease-in-out;
-    transition: all 100ms ease-in-out; }
-  .ps-start-search .column.manufacturers {
-    background-image: url("../img/demo-search-start-1.jpg");
-    background-position: 0 0;
-    background-repeat: no-repeat; }
-  .ps-start-search .column.suppliers {
-    background-image: url("../img/demo-search-start-2.jpg");
-    background-position: 0 0;
-    background-repeat: no-repeat; }
-  .ps-start-search .column h4 {
-    position: relative;
-    z-index: 10;
-    color: #FFF;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    line-height: 8.75em;
-    text-shadow: 0 2px 2px rgba(43, 53, 57, 0.5);
-    -webkit-transition: all 100ms ease-in-out;
-    -moz-transition: all 100ms ease-in-out;
-    -o-transition: all 100ms ease-in-out;
-    transition: all 100ms ease-in-out; }
 
 /* How It Works */
 #ps-hero {
@@ -2663,6 +2608,119 @@ body#ps-landing-page {
     padding: 0 2em;
     line-height: 137.5%;
     color: #aab2bb; }
+
+/* -------- PANELS */
+.ps-start-search .column {
+  position: relative;
+  height: 8.75em;
+  background-color: #0C9;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .ps-start-search .column.half {
+    width: 47%; }
+    .ps-start-search .column.half:first-of-type {
+      margin-right: 6%; }
+  .ps-start-search .column:hover {
+    text-shadow: 0 2px 6px rgba(43, 53, 57, 0.25); }
+    .ps-start-search .column:hover:before {
+      background-color: rgba(43, 53, 57, 0.25); }
+  .ps-start-search .column:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 53, 57, 0.5);
+    -webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out; }
+  .ps-start-search .column.manufacturers {
+    background-image: url("../img/demo-search-start-1.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat; }
+  .ps-start-search .column.suppliers {
+    background-image: url("../img/demo-search-start-2.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat; }
+  .ps-start-search .column h4 {
+    position: relative;
+    z-index: 10;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 8.75em;
+    text-shadow: 0 2px 2px rgba(43, 53, 57, 0.5);
+    -webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out; }
+
+#ps-start-search .ps-panel {
+  width: 600px; }
+#ps-start-search .column {
+  position: relative;
+  height: 8.75em;
+  background-color: #0C9;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  #ps-start-search .column.half {
+    width: 47%; }
+    #ps-start-search .column.half:first-of-type {
+      margin-right: 6%; }
+  #ps-start-search .column:hover {
+    text-shadow: 0 2px 6px rgba(43, 53, 57, 0.25); }
+    #ps-start-search .column:hover:before {
+      background-color: rgba(43, 53, 57, 0.25); }
+  #ps-start-search .column:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 53, 57, 0.5);
+    -webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out; }
+  #ps-start-search .column.manufacturers {
+    background-image: url("../img/demo-search-start-1.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat; }
+  #ps-start-search .column.suppliers {
+    background-image: url("../img/demo-search-start-2.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat; }
+  #ps-start-search .column h4 {
+    position: relative;
+    z-index: 10;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 8.75em;
+    text-shadow: 0 2px 2px rgba(43, 53, 57, 0.5);
+    -webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out; }
 
 /* -------- BREAKPOINTS */
 @media only screen and (min-width: 1200px) {
@@ -2914,7 +2972,6 @@ body#ps-landing-page {
     body#ps-landing-page ul.topbar-nav .ps-user-menu > a {
       padding: 10px; }
   body#ps-landing-page #ps-page-header.fixed ul.topbar-nav {
-    margin-top: 0;
     background-color: transparent;
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
@@ -2924,6 +2981,9 @@ body#ps-landing-page {
     font-size: 1.5em;
     letter-spacing: -0.01em;
     word-spacing: 0.025em; }
+
+  #ps-page-header .ps-logotype {
+    display: none; }
 
   #ps-panel-who {
     height: 420px !important; }

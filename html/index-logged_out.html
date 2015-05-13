@@ -31,8 +31,7 @@
 
 	
 </head>
-<body id="ps-landing-page" class="user-logged-in">
-
+<body id="ps-landing-page">
 
 <!--Join-->
 <div id="ps-join" class="ps-page-overlay">
@@ -132,26 +131,9 @@
 			</a><!--ps-lockup-->
 
 			<ul class="topbar-nav pull-right" role="menubar">
-				<li class="ps-user-menu">
-					<a href="#"><span class="label">Matt's Energy Drink</span> </a>
-					<div class="ps-popover ps-panel" role="presentation">
-						<ul class="ps-panel-list menu-list" role="menu">
-							<li role="presentation">
-								<a href="#" class="list-item" role="menuitem">
-									Matt's Energy Drink 
-									<br>
-									<span class="subtitle">View public profile</span>
-								</a>
-							</li>
-							<li role="presentation"><a href="#" class="list-item" role="menuitem">Start Searching</a></li>
-							<li role="presentation"><a href="#" class="list-item" role="menuitem">Your Account</a></li>
-							<li role="presentation"><a href="#" class="list-item" role="menuitem">Sign Out</a></li>
-						</ul>
-						<div class="ps-panel-arrows" role="presentation">
-							<span class="inner arrow"></span>
-						</div>
-					</div><!--ps-popover-->
-				</li><!--ps-user-menu-->
+				<li><a href="#" role="menuitem">How It Works</a></li>
+				<li><a href="#" role="menuitem">Contact Us</a></li>
+				<li><a href="#" class="small fill all-caps button" onclick="showOverlay($('#ps-join')); return false;">Join</a></li>
 			</ul><!--topbar-nav-->
 		</header><!--ps-topbar-->
 
@@ -233,12 +215,12 @@
 				<div id="why-brands" class="half column">
 					<div class="why-title"><h2>Brands</h2></div>
 					<div class="why-about"><p>Whether you're a new startup or an existing brand, PartnerSlate helps you gain efficiencies, cut costs, and build partnerships in the food industry.</p></div>
-					<a href="#" class="text button"><span class="label">Search now</span> &nbsp;&nbsp;»</a>
+					<a href="#" class="text button" onclick="showOverlay($('#ps-join')); return false;"><span class="label">Join now</span> &nbsp;&nbsp;»</a>
 				</div><!--why-brands-->
 				<div id="why-manufacture" class="half column">
 					<div class="why-title"><h2>Manufacturers</h2></div>
 					<div class="why-about"><p>Develop your presence as a world-class contract manufacturer, generate leads, and cultivate relationships that will help scale your business.</p></div>
-					<a href="#" class="text button"><span class="label">Search now</span> &nbsp;&nbsp;»</a>
+					<a href="#" class="text button" onclick="showOverlay($('#ps-join')); return false;"><span class="label">Join now</span> &nbsp;&nbsp;»</a>
 				</div><!--why-brands-->
 			</div><!--row-->
 
@@ -248,7 +230,7 @@
 				<div id="why-suppliers" class="full column">
 					<div class="why-title"><h2>Suppliers</h2></div>
 					<div class="why-about"><p>Increase your network within the manufacturing industry while partnering with brands looking to source the highest quality materials and ingredients.</p></div>
-					<a href="#" class="text button"><span class="label">Search now</span> &nbsp;&nbsp;»</a>
+					<a href="#" class="text button" onclick="showOverlay($('#ps-join')); return false;"><span class="label">Join now</span> &nbsp;&nbsp;»</a>
 				</div><!--why-suppliers-->
 			</div><!--row-->
 		</div><!--row-lining-->
