@@ -29,11 +29,45 @@
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <script type="text/javascript" src="../js/jquery_v1.11.1.js"></script>
 
-	
+
 </head>
 <body id="ps-landing-page">
 
-<!--Join-->
+<!--Login Overlay-->
+<div id="ps-login" class="ps-page-overlay">
+	<div class="ps-panel ps-popover">
+		<div class="ps-panel-section">
+			<h3>Welcome Back</h3>
+
+			<br><br>
+
+			<form>
+				<div class="input-row">
+					<input type="text" placeholder="Email or Phone Number" value="">
+				</div><!--input-row-->
+				<div class="input-row">
+					<input id="ps-test-input-2" type="password" placeholder="Password" value="">
+					<div class="row text-right">
+						<span class="input-help-text"><a href="#">Forgot your password?</a></span>
+					</div><!--row-->
+				</div><!--input-row-->
+				<div class="input-row">
+					<a href="user/inbox/inbox.html" class="fill full-width button">Login</a>
+				</div><!--input-row-->
+			</form>
+		</div><!--ps-panel-section-->
+
+		<div class="ps-panel-section">
+			<div class="row">
+				<span class="input-help-text">Don't have an account? <a href="#" onclick="hideOverlay();showOverlay($('#ps-join'));return false;">Join PartnerSlate</a> ></a>
+			</div><!--row-->
+		</div><!--ps-panel-section-->
+	</div>
+
+	<div class="page-dimmer"></div>
+</div><!--ps-login-->
+
+<!--Join Overlay-->
 <div id="ps-join" class="ps-page-overlay">
 	<div class="ps-panel ps-popover">
 		<div class="ps-panel-section">
@@ -83,7 +117,7 @@
 
 		<div class="ps-panel-section">
 			<div class="row">
-				<span class="input-help-text">Already a member? <a href="#">Login to PartnerSlate</a> &gt;</span>
+				<span class="input-help-text">Already a member? <a href="#" onclick="hideOverlay();showOverlay($('#ps-login'));return false;">Login to PartnerSlate</a> &gt;</span>
 			</div>
 		</div>
 	</div>
@@ -92,7 +126,7 @@
 </div><!--ps-join-->
 
 
-<!--Start Search-->
+<!--Start Search Overlay-->
 <div id="ps-start-search" class="ps-page-overlay">
 	<div class="ps-panel ps-popover">
 		<div class="ps-panel-section">
@@ -133,9 +167,10 @@
 			<ul class="topbar-nav pull-right" role="menubar">
 				<li><a href="#" role="menuitem">How It Works</a></li>
 				<li><a href="#" role="menuitem">Contact Us</a></li>
+				<li><a href="#" role="menuitem" onclick="showOverlay($('#ps-login')); return false;">Login</a></li>
 				<li><a href="#" class="small fill all-caps button" onclick="showOverlay($('#ps-join')); return false;">Join</a></li>
 			</ul><!--topbar-nav-->
-		</header><!--ps-topbar-->
+		</header><!--ps-page-header-->
 
 	
 <div id="ps-page-content" class="row">

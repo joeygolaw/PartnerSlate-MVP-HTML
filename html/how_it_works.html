@@ -40,28 +40,10 @@
 			</a><!--ps-lockup-->
 
 			<ul class="topbar-nav pull-right" role="menubar">
-				<li class="current"><a href="#" role="menuitem">How It Works</a></li>
+				<li><a href="#" role="menuitem">How It Works</a></li>
 				<li><a href="#" role="menuitem">Contact Us</a></li>
-				<li class="ps-user-menu">
-					<a href="#"><span class="label">Matt's Energy Drink</span> </a>
-					<div class="ps-popover ps-panel" role="presentation">
-						<ul class="ps-panel-list menu-list" role="menu">
-							<li role="presentation">
-								<a href="#" class="list-item" role="menuitem">
-									Matt's Energy Drink 
-									<br>
-									<span class="subtitle">View public profile</span>
-								</a>
-							</li>
-							<li role="presentation"><a href="#" class="list-item" role="menuitem">Start Searching</a></li>
-							<li role="presentation"><a href="#" class="list-item" role="menuitem">Your Account</a></li>
-							<li role="presentation"><a href="#" class="list-item" role="menuitem">Sign Out</a></li>
-						</ul>
-						<div class="ps-panel-arrows" role="presentation">
-							<span class="inner arrow"></span>
-						</div>
-					</div><!--ps-popover-->
-				</li><!--ps-user-menu-->
+				<li><a href="#" role="menuitem" onclick="showOverlay($('#ps-login')); return false;">Login</a></li>
+				<li><a href="#" class="small fill all-caps button" onclick="showOverlay($('#ps-join')); return false;">Join</a></li>
 			</ul><!--topbar-nav-->
 		</header><!--ps-topbar-->
 

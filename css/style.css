@@ -2971,11 +2971,14 @@ body#ps-landing-page {
     font-size: 0.875em; }
     body#ps-landing-page ul.topbar-nav .ps-user-menu > a {
       padding: 10px; }
-  body#ps-landing-page #ps-page-header.fixed ul.topbar-nav {
-    background-color: transparent;
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    box-shadow: none !important; } }
+  body#ps-landing-page #ps-page-header.fixed {
+    padding-right: 4%;
+    padding-right: 4%; }
+    body#ps-landing-page #ps-page-header.fixed ul.topbar-nav {
+      background-color: transparent;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important; } }
 @media only screen and (max-width: 520px) {
   h1 {
     font-size: 1.5em;
