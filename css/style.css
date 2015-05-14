@@ -35,7 +35,7 @@ body {
   overflow-x: hidden;
   max-width: 1500px;
   min-width: 960px;
-  min-height: 480px;
+  min-height: 520px;
   margin: 0 auto;
   background-color: inherit;
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
@@ -152,6 +152,7 @@ a {
 .ps-panel {
   width: 100%;
   position: relative;
+  margin: 0 auto;
   background-color: #FFF;
   -webkit-border-top-right-radius: 15px;
   -moz-border-radius-topright: 15px;
@@ -396,6 +397,9 @@ hr {
   border-style: solid;
   border-width: 1px 0 0 0;
   border-color: #d4d8dd; }
+
+small {
+  font-size: 0.875em; }
 
 .button-group {
   margin: 10px; }
@@ -864,6 +868,7 @@ input[type="checkbox"] {
   position: relative;
   top: 2px;
   display: inline-block;
+  vertical-align: top;
   width: 1em;
   height: 1em;
   background-color: transparent;
@@ -1499,9 +1504,15 @@ ul.topbar-nav {
       font-size: 0.75em;
       line-height: 150%; }
 
+.ps-popover-page {
+  padding: 6.5em 0 3em 0; }
+
 .ps-popover {
   z-index: 200;
+  width: 360px;
   min-width: 260px;
+  margin: 0 auto;
+  padding: 15px 30px;
   border: 1px solid #aab2bb;
   -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
@@ -1524,6 +1535,10 @@ ul.topbar-nav {
     border-bottom-left-radius: 7.5px; }
     .ps-popover ul.ps-panel-list li:last-child a {
       border: 0; }
+  .ps-popover .ps-panel-section {
+    padding: 15px 0; }
+    .ps-popover .ps-panel-section:last-of-type {
+      padding-bottom: 0; }
 
 body.page-overlay {
   overflow: hidden; }

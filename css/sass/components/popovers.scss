@@ -1,7 +1,16 @@
 // -------- POPOVERS
+// Popover Page
+.ps-popover-page {
+	padding: 6.5em 0 3em 0;
+	}// .ps-popover-page
+
+
 .ps-popover {
 	z-index: 200;
-	min-width: 260px;
+	width: 360px;
+		min-width: 260px;
+	margin: 0 auto;
+	padding: ($padding-base * 1.5) ($padding-base * 3);
 	border: 1px solid tint($PS_Slate,50%);
 	@include box-shadow(0,4px,12px,0,0.12);
 	
@@ -32,6 +41,15 @@
 				}// :last-child
 			}// <li>
 		}// ul.ps-panel-list
+
+	// Sections
+	.ps-panel-section {
+		padding: ($padding-base * 1.5) 0;
+
+		&:last-of-type {
+			padding-bottom: 0;
+			}// :last-of-type
+		}// .ps-panel-section
 	}// .ps-popover
 
 	// Page Overlays

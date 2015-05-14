@@ -1,7 +1,9 @@
 // -------- PANELS
+// Panel
 .ps-panel {
 	width: 100%;
 	position: relative;
+	margin: 0 auto;
 	background-color: $white;
 	@include round(top,right,$ps-panel-radius);
 	@include round(bottom,left,$ps-panel-radius);
