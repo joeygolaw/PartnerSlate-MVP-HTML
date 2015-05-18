@@ -7,14 +7,16 @@
 		word-spacing: 0.025em;
 		}// <h1>
 
-	// -------- HEADER
-	#ps-page-header {
-		.ps-logotype {
-			display: none;
-			}// .ps-logotype
-		}// #ps-page-header
-
 	// -------- LANDING PAGE
+	body#ps-landing-page {
+		// Hide PS Logotype
+		#ps-page-header {
+			.ps-logotype {
+				display: none;
+				}// .ps-logotype
+			}// #ps-page-header
+		}// body#ps-landing-page
+
 	#ps-panel-who {
 		height: ($ps-slider-height * 0.75) !important;
 		}// #ps-panel-who

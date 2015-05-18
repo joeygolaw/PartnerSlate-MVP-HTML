@@ -253,7 +253,7 @@ a {
   letter-spacing: 0.1em; }
 
 ul.ps-panel-list {
-  width: inherit;
+  width: 100%;
   font-size: 1em;
   color: #567; }
   ul.ps-panel-list li {
@@ -1170,6 +1170,7 @@ ul.topbar-nav {
       top: 90%;
       right: -1.8em;
       display: none;
+      width: 260px;
       padding: 10px 0 15px 0;
       color: #2B3539; }
     ul.topbar-nav > li.ps-user-menu.toggled {
@@ -2037,9 +2038,6 @@ body.page-overlay {
     font-size: 0.875em;
     line-height: 250%; }
 
-body.user-logged-in {
-  margin-top: 60px; }
-
 /* -------- PAGES */
 /* Landing Page */
 #ps-slider {
@@ -2610,7 +2608,6 @@ body#ps-landing-page {
     padding-bottom: 15px; }
 
 #ps-how-it-works {
-  margin-top: 0;
   min-width: 400px;
   background-color: #FFF; }
   #ps-how-it-works #ps-page-content {
@@ -2982,7 +2979,7 @@ body#ps-landing-page {
 
   body#ps-landing-page ul.topbar-nav {
     margin-top: 0.5em;
-    padding: 0 0.25em 0 0.75em;
+    padding: 0 0 0 0.75em;
     font-size: 0.875em; }
     body#ps-landing-page ul.topbar-nav .ps-user-menu > a {
       padding: 10px; }
@@ -3000,7 +2997,7 @@ body#ps-landing-page {
     letter-spacing: -0.01em;
     word-spacing: 0.025em; }
 
-  #ps-page-header .ps-logotype {
+  body#ps-landing-page #ps-page-header .ps-logotype {
     display: none; }
 
   #ps-panel-who {
